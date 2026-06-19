@@ -10,12 +10,12 @@ Day la bootstrap contract bat buoc cho chat duoc chi dinh lam `Shopify Brain Own
 
 ## Mandatory owner sources
 
-- Rules package: `/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi`
-- Source corpus: `/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source`
-- Built brain vault: `/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain`
-- Store registry: `/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/STORE_REGISTRY.json`
-- Executor bridge: `/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge`
-- Brain builder: `/Users/delements/Documents/Business Systems Integration/local_programs/shopify_brain_builder`
+- Rules package: `$BSI_ROOT/shared_brains/shopify_admin_bsi`
+- Source corpus: `$BSI_ROOT/shared_brains/shopify_admin_bsi_source`
+- Built brain vault: `$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain`
+- Store registry: `$BSI_ROOT/shared_brains/shopify_admin_bsi/STORE_REGISTRY.json`
+- Executor bridge: `$BSI_ROOT/local_programs/shopify_codex_bridge`
+- Brain builder: `$BSI_ROOT/local_programs/shopify_brain_builder`
 
 ## Owner authority
 

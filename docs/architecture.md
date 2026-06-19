@@ -49,8 +49,8 @@ Figma Desktop
 ```
 
 **Key Files**:
-- `~/Documents/HH/figma-mcp-server/mcp/` — MCP server code
-- `~/Documents/HH/figma-mcp-server/plugin/` — Figma plugin code
+- `$FIGMA_MCP_DIR/mcp/` — MCP server code
+- `$FIGMA_MCP_DIR/plugin/` — Figma plugin code
 - `~/.openclaw/openclaw.json` → `mcp.servers.figma`
 
 **Constraints**:

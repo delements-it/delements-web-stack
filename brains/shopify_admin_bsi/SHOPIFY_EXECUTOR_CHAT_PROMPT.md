@@ -11,11 +11,11 @@ Vai trò:
 - Chat này phải dùng đúng Shopify MCP path, shared brain, và local program của Business.
 
 Nguồn bắt buộc phải dùng:
-- Rules package: /Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi
-- Source corpus: /Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source
-- Built brain vault: /Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain
-- Store registry: /Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/STORE_REGISTRY.json
-- Executor bridge: /Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge
+- Rules package: $BSI_ROOT/shared_brains/shopify_admin_bsi
+- Source corpus: $BSI_ROOT/shared_brains/shopify_admin_bsi_source
+- Built brain vault: $BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain
+- Store registry: $BSI_ROOT/shared_brains/shopify_admin_bsi/STORE_REGISTRY.json
+- Executor bridge: $BSI_ROOT/local_programs/shopify_codex_bridge
 
 Quy tắc bắt buộc:
 - Phải dùng `shopify_codex_bridge` làm execution path ưu tiên.

@@ -9,8 +9,8 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
-info() { echo -e "  ${GREEN}ℹ️${NC}  $1" }
-warn() { echo -e "  ${YELLOW}⚠️${NC}  $1" }
+info() { echo -e "  ${GREEN}[INFO]${NC} $1"; }
+warn() { echo -e "  ${YELLOW}[WARN]${NC} $1"; }
 
 # Load env
 ENV_FILE="env/.env"
@@ -21,7 +21,7 @@ fi
 SHOPIFY_ACCESS_TOKEN="${SHOPIFY_ACCESS_TOKEN:-}"
 SHOPIFY_DOMAIN="${SHOPIFY_DOMAIN:-your-store.myshopify.com}"
 
-echo "🛒 Setting up Shopify..."
+echo "Setting up Shopify..."
 echo ""
 
 # --- Install Shopify CLI ---
@@ -37,7 +37,7 @@ fi
 if [[ -z "$SHOPIFY_ACCESS_TOKEN" ]]; then
   warn "SHOPIFY_ACCESS_TOKEN not set in env/.env"
   warn "Get your token: Shopify Admin → Apps → Develop apps → Admin API access"
-  warn "Continuing without token — you'll need to add it later."
+  warn "Continuing without token - you'll need to add it later."
 fi
 
 # --- Inject MCP configs into openclaw.json ---
@@ -78,11 +78,11 @@ with open('$OPENCLAW_JSON', 'w') as f:
     json.dump(config, f, indent=2)
 "
 else
-  warn "openclaw.json not found — run OpenClaw setup first"
+  warn "openclaw.json not found - run OpenClaw setup first"
 fi
 
 echo ""
-echo -e "${GREEN}✅ Shopify setup complete.${NC}"
+echo -e "${GREEN}[OK] Shopify setup complete.${NC}"
 echo "  CLI:          shopify $(shopify version 2>/dev/null || echo 'installed')"
 echo "  MCP (Admin):  npx shopify-mcp"
 echo "  MCP (Dev):    npx @shopify/dev-mcp@latest"

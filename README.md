@@ -106,10 +106,12 @@ Repo này **KHÔNG** chứa tokens hay credentials. Tất cả secrets được 
 | Variable | Mô tả | Lấy từ đâu |
 |---|---|---|
 | `FIGMA_USER_ID` | Figma user ID | Figma Desktop → Profile |
+| `FIGMA_MCP_DIR` | Local clone path for `figma-mcp-server` | Default: `$HOME/Documents/WORKSPACES/AI Coding Tools/figma-mcp-server` |
 | `WEBFLOW_TOKEN` | Webflow API token | Webflow → Settings → API |
 | `SHOPIFY_ACCESS_TOKEN` | Shopify Admin API token | Shopify Admin → Apps → Develop apps |
 | `SHOPIFY_DOMAIN` | Store domain | `your-store.myshopify.com` |
 | `OPENCLAW_GATEWAY_TOKEN` | OpenClaw gateway auth token | Auto-generated |
+| `BSI_ROOT` | Business Systems Integration project root | `$HOME/Documents/Business Systems Integration` |
 
 ## 🎨 Figma Integration
 

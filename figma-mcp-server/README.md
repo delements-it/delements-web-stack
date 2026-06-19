@@ -12,7 +12,7 @@ This directory contains patches and documentation for the [Figma MCP Server](htt
 
 The setup script (`scripts/02-setup-figma.sh`) will:
 
-1. Clone the repo to `~/Documents/HH/figma-mcp-server`
+1. Clone the repo to `$FIGMA_MCP_DIR`
 2. Install MCP server dependencies (`mcp/` directory)
 3. Install plugin dependencies (`plugin/` directory)
 4. Build the Figma plugin
@@ -21,7 +21,7 @@ The setup script (`scripts/02-setup-figma.sh`) will:
 
 Currently no patches applied. If you need to modify the MCP server or plugin:
 
-1. Make changes in `~/Documents/HH/figma-mcp-server`
+1. Make changes in `$FIGMA_MCP_DIR`
 2. Create a patch file: `git diff > patches/your-patch.patch`
 3. Apply in setup script if needed
 

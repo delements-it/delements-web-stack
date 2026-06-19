@@ -11,7 +11,7 @@ help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
 		awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
-all: preflight figma webflow shopify agents verify ## Full setup (recommended)
+all: preflight openclaw figma webflow shopify agents verify ## Full setup (recommended)
 
 preflight: ## Check system dependencies
 	@bash $(SCRIPTS_DIR)/00-preflight.sh

@@ -44,7 +44,7 @@ cat ~/.openclaw/openclaw.json | grep -A5 "workspace"
 2. Open the plugin: Plugins → Development → Figma MCP Server
 3. Check plugin shows "Connected" status
 4. Verify WebSocket port 38450 is not blocked: `lsof -i :38450`
-5. Rebuild plugin: `cd ~/Documents/HH/figma-mcp-server/plugin && npm run build`
+5. Rebuild plugin: `cd "$FIGMA_MCP_DIR/plugin" && npm run build`
 
 ### MCP server crashes
 
@@ -53,7 +53,7 @@ cat ~/.openclaw/openclaw.json | grep -A5 "workspace"
 **Solutions**:
 1. Check logs: `openclaw agent bsi-figma-mcp` → ask for error details
 2. Verify Node.js version: `node -v` (need ≥ 20)
-3. Reinstall dependencies: `cd ~/Documents/HH/figma-mcp-server/mcp && npm install`
+3. Reinstall dependencies: `cd "$FIGMA_MCP_DIR/mcp" && npm install`
 4. Check for syntax errors in MCP config
 
 ### Tools return empty/wrong data
@@ -245,7 +245,7 @@ cp ~/.openclaw/openclaw.json ~/.openclaw/openclaw.json.backup
 rm -rf ~/.openclaw/workspace-bsi-*
 
 # Remove Figma MCP server
-rm -rf ~/Documents/HH/figma-mcp-server
+rm -rf "$FIGMA_MCP_DIR"
 
 # Re-run setup
 cd delements-web-stack

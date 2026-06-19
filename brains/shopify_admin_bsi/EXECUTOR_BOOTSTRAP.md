@@ -13,10 +13,10 @@ Day la bootstrap contract bat buoc cho moi Shopify executor chat trong `Business
 
 ## Mandatory resources
 
-- Rules package: `/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi`
-- Source corpus: `/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source`
-- Built brain vault: `/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain`
-- Executor bridge: `/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge`
+- Rules package: `$BSI_ROOT/shared_brains/shopify_admin_bsi`
+- Source corpus: `$BSI_ROOT/shared_brains/shopify_admin_bsi_source`
+- Built brain vault: `$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain`
+- Executor bridge: `$BSI_ROOT/local_programs/shopify_codex_bridge`
 
 ## Official executor store policy
 

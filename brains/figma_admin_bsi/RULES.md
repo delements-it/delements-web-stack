@@ -4,7 +4,7 @@
 Before any non-trivial action:
 1. Read this brain and rules files
 2. Read the worker envelope or task context
-3. Confirm artifact destination: `/Users/delements/Documents/Business Systems Integration/runtime/`
+3. Confirm artifact destination: `$BSI_ROOT/runtime/`
 4. Confirm allowed paths and side-effect policy
 5. Check `~/.openclaw/workspace/handoff_rules.yaml` for valid handoff contracts
 

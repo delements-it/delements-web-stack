@@ -10,13 +10,13 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
-pass() { echo -e "  ${GREEN}✅${NC} $1" }
-fail() { echo -e "  ${RED}❌${NC} $1" }
-warn() { echo -e "  ${YELLOW}⚠️${NC}  $1" }
+pass() { echo -e "  ${GREEN}[OK]${NC} $1"; }
+fail() { echo -e "  ${RED}[FAIL]${NC} $1"; }
+warn() { echo -e "  ${YELLOW}[WARN]${NC} $1"; }
 
 ERRORS=0
 
-echo "🔍 Checking system dependencies..."
+echo "Checking system dependencies..."
 echo ""
 
 # --- macOS ---
@@ -31,7 +31,7 @@ fi
 if command -v brew &>/dev/null; then
   pass "Homebrew $(brew --version | head -1)"
 else
-  fail "Homebrew not found — install from https://brew.sh"
+  fail "Homebrew not found - install from https://brew.sh"
   ERRORS=$((ERRORS + 1))
 fi
 
@@ -42,10 +42,10 @@ if command -v node &>/dev/null; then
   if [[ "$NODE_MAJOR" -ge 20 ]]; then
     pass "Node.js $NODE_VER"
   else
-    warn "Node.js $NODE_VER (recommend ≥ v20)"
+    warn "Node.js $NODE_VER (recommend >= v20)"
   fi
 else
-  fail "Node.js not found — brew install node"
+  fail "Node.js not found - brew install node"
   ERRORS=$((ERRORS + 1))
 fi
 
@@ -69,14 +69,14 @@ fi
 if command -v git &>/dev/null; then
   pass "git $(git --version | awk '{print $3}')"
 else
-  warn "git not found — needed for Figma MCP clone"
+  warn "git not found - needed for Figma MCP clone"
 fi
 
 # --- OpenClaw ---
 if command -v openclaw &>/dev/null; then
   pass "OpenClaw $(openclaw --version 2>/dev/null || echo 'installed')"
 else
-  warn "OpenClaw not found — will be installed by 01-install-openclaw.sh"
+  warn "OpenClaw not found - will be installed by 01-install-openclaw.sh"
 fi
 
 # --- .env file ---
@@ -107,13 +107,13 @@ if [[ -f "$ENV_FILE" ]]; then
     warn "WEBFLOW_TOKEN not set in .env"
   fi
 else
-  warn "env/.env not found — run: cp env/.env.example env/.env"
+  warn "env/.env not found - run: cp env/.env.example env/.env"
 fi
 
 echo ""
 if [[ $ERRORS -gt 0 ]]; then
-  echo -e "${RED}❌ $ERRORS critical issue(s) found. Fix before continuing.${NC}"
+  echo -e "${RED}[FAIL] $ERRORS critical issue(s) found. Fix before continuing.${NC}"
   exit 1
 else
-  echo -e "${GREEN}✅ Preflight check passed!${NC}"
+  echo -e "${GREEN}[OK] Preflight check passed!${NC}"
 fi

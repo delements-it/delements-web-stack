@@ -13,7 +13,7 @@ make figma
 ```
 
 This will:
-1. Clone `figma-mcp-server` to `~/Documents/HH/figma-mcp-server`
+1. Clone `figma-mcp-server` to `$FIGMA_MCP_DIR`
 2. Install MCP server dependencies
 3. Install plugin dependencies
 4. Build the plugin
@@ -25,7 +25,7 @@ After running `make figma`, you must manually import the plugin into Figma Deskt
 
 1. Open Figma Desktop
 2. Go to **Plugins** → **Development** → **Import plugin from manifest...**
-3. Select: `~/Documents/HH/figma-mcp-server/plugin/manifest.json`
+3. Select: `$FIGMA_MCP_DIR/plugin/manifest.json`
 4. The plugin will appear in your Development plugins list
 
 ## Configuration
@@ -37,7 +37,7 @@ Add to `env/.env`:
 ```bash
 FIGMA_USER_ID=your_figma_user_id
 FIGMA_MCP_REPO=https://github.com/Antonytm/figma-mcp-server.git
-FIGMA_MCP_DIR=~/Documents/HH/figma-mcp-server
+FIGMA_MCP_DIR=$HOME/Documents/WORKSPACES/AI Coding Tools/figma-mcp-server
 ```
 
 **Finding your Figma User ID**:
@@ -57,7 +57,7 @@ Auto-injected into `~/.openclaw/openclaw.json`:
         "command": "npx",
         "args": ["tsx", "src/index.ts"],
         "env": { "TRANSPORT": "stdio" },
-        "cwd": "~/Documents/HH/figma-mcp-server/mcp"
+        "cwd": "$FIGMA_MCP_DIR/mcp"
       }
     }
   }
@@ -136,14 +136,14 @@ openclaw agent bsi-figma-mcp
 
 - Plugin must be running on port 38450
 - Check for port conflicts: `lsof -i :38450`
-- Rebuild plugin: `cd ~/Documents/HH/figma-mcp-server/plugin && npm run build`
+- Rebuild plugin: `cd "$FIGMA_MCP_DIR/plugin" && npm run build`
 
 ## Updates
 
 To update the Figma MCP server:
 
 ```bash
-cd ~/Documents/HH/figma-mcp-server
+cd "$FIGMA_MCP_DIR"
 git pull
 cd mcp && npm install
 cd ../plugin && npm install && npm run build

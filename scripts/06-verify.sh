@@ -10,24 +10,33 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m'
 
-pass() { echo -e "  ${GREEN}✅${NC} $1" }
-fail() { echo -e "  ${RED}❌${NC} $1" }
-warn() { echo -e "  ${YELLOW}⚠️${NC}  $1" }
+pass() { echo -e "  ${GREEN}[OK]${NC} $1"; }
+fail() { echo -e "  ${RED}[FAIL]${NC} $1"; }
+warn() { echo -e "  ${YELLOW}[WARN]${NC} $1"; }
 
 OPENCLAW_JSON="$HOME/.openclaw/openclaw.json"
+ENV_FILE="env/.env"
 
-echo "🔍 Verifying web stack integrations..."
+if [[ -f "$ENV_FILE" ]]; then
+  set -a
+  source "$ENV_FILE"
+  set +a
+fi
+
+FIGMA_MCP_DIR="${FIGMA_MCP_DIR:-$HOME/Documents/WORKSPACES/AI Coding Tools/figma-mcp-server}"
+
+echo "Verifying web stack integrations..."
 echo ""
 
 # --- Figma ---
-echo "🎨 Figma:"
-if [[ -d "$HOME/Documents/HH/figma-mcp-server/mcp" ]]; then
+echo "Figma:"
+if [[ -d "$FIGMA_MCP_DIR/mcp" ]]; then
   pass "MCP server repo exists"
 else
   fail "MCP server repo missing"
 fi
 
-if [[ -f "$HOME/Documents/HH/figma-mcp-server/plugin/manifest.json" ]]; then
+if [[ -f "$FIGMA_MCP_DIR/plugin/manifest.json" ]]; then
   pass "Plugin manifest exists"
 else
   fail "Plugin manifest missing"
@@ -42,7 +51,7 @@ fi
 echo ""
 
 # --- Webflow ---
-echo "🌐 Webflow:"
+echo "Webflow:"
 if python3 -c "import json; d=json.load(open('$OPENCLAW_JSON')); assert 'webflow' in d.get('mcp',{}).get('servers',{})" 2>/dev/null; then
   pass "MCP config in openclaw.json"
 else
@@ -62,7 +71,7 @@ fi
 echo ""
 
 # --- Shopify ---
-echo "🛒 Shopify:"
+echo "Shopify:"
 if command -v shopify &>/dev/null; then
   pass "Shopify CLI: $(shopify version 2>/dev/null || echo 'installed')"
 else
@@ -84,7 +93,7 @@ fi
 echo ""
 
 # --- Agents ---
-echo "🤖 BSI Agents:"
+echo "BSI Agents:"
 for agent in bsi-figma-mcp bsi-figma-executor bsi-webflow-mcp bsi-webflow-executor bsi-shopify-mcp bsi-shopify-executor; do
   if python3 -c "import json; d=json.load(open('$OPENCLAW_JSON')); assert '$agent' in [a['id'] for a in d.get('agents',{}).get('list',[])]" 2>/dev/null; then
     pass "Agent: $agent"
@@ -96,7 +105,7 @@ done
 echo ""
 
 # --- Workspaces ---
-echo "📁 Workspaces:"
+echo "Workspaces:"
 for ws in workspace-bsi-figma-mcp workspace-bsi-figma-executor workspace-bsi-webflow-mcp workspace-bsi-webflow-executor workspace-bsi-shopify-mcp workspace-bsi-shopify-executor; do
   if [[ -d "$HOME/.openclaw/$ws" ]]; then
     pass "$ws"
@@ -106,8 +115,8 @@ for ws in workspace-bsi-figma-mcp workspace-bsi-figma-executor workspace-bsi-web
 done
 
 echo ""
-echo "════════════════════════════════════════════"
-echo -e "${GREEN}✅ Verification complete.${NC}"
+echo "============================================"
+echo -e "${GREEN}[OK] Verification complete.${NC}"
 echo ""
 echo "Next steps:"
 echo "  1. Restart OpenClaw: openclaw gateway restart"
