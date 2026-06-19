@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopify Admin Bsi Brain Obsidian Brain</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0f1311;
+      --panel: #171d19;
+      --panel-2: #202822;
+      --text: #edf2ea;
+      --muted: #9ca99f;
+      --line: rgba(204, 217, 202, .22);
+      --accent: #f0c36a;
+      --system: #f0c36a;
+      --axis: #d8d0c3;
+      --folder: #bfa06a;
+      --domain: #7fb069;
+      --workflow: #8ab6d6;
+      --source: #d7ded4;
+      --sku: #f4845f;
+      --niche: #9bcf88;
+      --stage: #70b7c7;
+      --material: #c6a0d8;
+      --supplier: #e4a86f;
+      --mo: #e6dd82;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+    body {
+      background: linear-gradient(135deg, #101411 0%, #18211c 45%, #11191a 100%);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+    .app { display: grid; grid-template-columns: 320px minmax(0, 1fr) 340px; height: 100%; }
+    aside, .detail { background: rgba(15, 19, 17, .88); border-color: rgba(255,255,255,.08); }
+    aside { border-right: 1px solid rgba(255,255,255,.08); padding: 18px; overflow: auto; }
+    .detail { border-left: 1px solid rgba(255,255,255,.08); padding: 18px; overflow: auto; }
+    h1 { font-size: 20px; line-height: 1.2; margin: 0 0 8px; }
+    h2 { font-size: 13px; color: var(--muted); text-transform: uppercase; margin: 22px 0 10px; }
+    p { color: var(--muted); line-height: 1.45; margin: 0 0 14px; }
+    .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 16px 0; }
+    .metric { background: var(--panel); border: 1px solid rgba(255,255,255,.08); border-radius: 8px; padding: 10px; }
+    .metric strong { display: block; font-size: 18px; }
+    .metric span { display: block; color: var(--muted); font-size: 11px; margin-top: 2px; }
+    input {
+      width: 100%; border: 1px solid rgba(255,255,255,.13); border-radius: 8px;
+      background: #0c100e; color: var(--text); padding: 11px 12px; outline: none;
+    }
+    .toolbar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    button {
+      border: 1px solid rgba(255,255,255,.12); background: var(--panel-2); color: var(--text);
+      border-radius: 7px; padding: 8px 10px; cursor: pointer; font-size: 12px;
+    }
+    button:hover, button.active { border-color: var(--accent); color: #fff7dc; }
+    .toggle { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 7px 0; }
+    .toggle button { min-width: 86px; }
+    .swatch { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 8px; vertical-align: -1px; }
+    .canvas-wrap { position: relative; min-width: 0; height: 100%; }
+    canvas { width: 100%; height: 100%; display: block; }
+    .hint {
+      position: absolute; left: 18px; bottom: 16px; color: var(--muted);
+      background: rgba(15,19,17,.76); border: 1px solid rgba(255,255,255,.08);
+      border-radius: 8px; padding: 8px 10px; font-size: 12px;
+    }
+    .detail-title { font-size: 18px; font-weight: 720; margin-bottom: 4px; overflow-wrap: anywhere; }
+    .pill { display: inline-block; border: 1px solid rgba(255,255,255,.12); border-radius: 999px; padding: 4px 8px; margin: 5px 5px 0 0; color: var(--muted); font-size: 11px; }
+    .kv { margin-top: 14px; }
+    .kv div { border-top: 1px solid rgba(255,255,255,.08); padding: 9px 0; }
+    .kv span { display: block; color: var(--muted); font-size: 11px; text-transform: uppercase; margin-bottom: 3px; }
+    .kv a, .kv code { color: #f0c36a; overflow-wrap: anywhere; }
+    @media (max-width: 1050px) {
+      .app { grid-template-columns: 280px minmax(0, 1fr); }
+      .detail { display: none; }
+    }
+    @media (max-width: 760px) {
+      .app { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); }
+      aside { max-height: 42vh; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside>
+      <h1>Shopify Admin Bsi Brain Obsidian Brain</h1>
+      <p>Local Obsidian brain graph built from converted Markdown, Drive folder context, and shared production entities.</p>
+      <input id="search" type="search" placeholder="Search SKU, material, supplier, source...">
+      <div class="toolbar">
+        <button id="zoomIn">Zoom +</button>
+        <button id="zoomOut">Zoom -</button>
+        <button id="reset">Fit</button>
+      </div>
+      <div class="metrics">
+        <div class="metric"><strong>11</strong><span>source notes</span></div>
+        <div class="metric"><strong>16</strong><span>directory records</span></div>
+        <div class="metric"><strong>26</strong><span>graph nodes</span></div>
+        <div class="metric"><strong>47</strong><span>graph links</span></div>
+      </div>
+      <h2>Layers</h2>
+      <div id="toggles"></div>
+    </aside>
+    <main class="canvas-wrap">
+      <canvas id="graph" aria-label="Fashion production Obsidian brain graph"></canvas>
+      <div class="hint">Wheel to zoom. Drag to pan. Click a node to inspect links.</div>
+    </main>
+    <section class="detail" id="detail"></section>
+  </div>
+  <script>
+    const graph = {"generated_at": "2026-06-12T14:51:49+07:00", "title": "Shopify Admin Bsi Brain Obsidian Brain", "schema_version": "2026.06.12", "sync_date": "2026-06-12", "department": "Shopify Admin BSI Brain", "vault": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain", "summary": {"directory_records": 16, "sources": 11, "entity_counts": {"mo": 0, "sku": 0, "niche": 0, "stage": 0, "material": 0, "supplier": 0}, "groups": {"system": 1, "folder": 1, "source": 11, "domain": 2, "workflow": 1}, "production_layer": {"enabled": false, "reason": "no RR Production database package found"}}, "nodes": [{"id": "hub::brain", "label": "Shopify Admin Bsi Brain Obsidian Brain", "kind": "hub", "group": "system", "weight": 28, "count": 0, "description": "Department source-data brain built from converted Markdown and Drive directory mapping.", "vault": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain", "x": 0, "y": 0}, {"id": "axis::folders", "label": "Folder Context", "kind": "axis", "group": "folder", "weight": 15, "count": 0, "x": 0.0, "y": -245.0}, {"id": "axis::domains", "label": "Domains", "kind": "axis", "group": "domain", "weight": 15, "count": 0, "x": 144.007, "y": -198.209}, {"id": "axis::workflow", "label": "Workflow Stages", "kind": "axis", "group": "workflow", "weight": 15, "count": 0, "x": 233.009, "y": -75.709}, {"id": "axis::sku", "label": "SKUs", "kind": "axis", "group": "sku", "weight": 15, "count": 0, "x": 233.009, "y": 75.709}, {"id": "axis::niche", "label": "Products / Niches", "kind": "axis", "group": "niche", "weight": 15, "count": 0, "x": 144.007, "y": 198.209}, {"id": "axis::stage", "label": "Product Stages", "kind": "axis", "group": "stage", "weight": 15, "count": 0, "x": 0.0, "y": 245.0}, {"id": "axis::material", "label": "Materials", "kind": "axis", "group": "material", "weight": 15, "count": 0, "x": -144.007, "y": 198.209}, {"id": "axis::supplier", "label": "Suppliers / Factories", "kind": "axis", "group": "supplier", "weight": 15, "count": 0, "x": -233.009, "y": 75.709}, {"id": "axis::mo", "label": "MO / PO / LSX", "kind": "axis", "group": "mo", "weight": 15, "count": 0, "x": -233.009, "y": -75.709}, {"id": "axis::source", "label": "Source Files", "kind": "axis", "group": "source", "weight": 15, "count": 0, "x": -144.007, "y": -198.209}, {"id": "folder::1a5985d60682e1a1", "label": "Source_Files", "kind": "folder", "group": "folder", "weight": 8.833213344056215, "count": 27, "source_path": "Source_Files", "x": -331.199, "y": -274.239}, {"id": "source::8032943af39eca7f", "label": "Shopify Admin BSI Brain Overview.md", "kind": "source", "group": "source", "weight": 2.8, "count": 0, "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/00_Context/Shopify Admin BSI Brain Overview.md", "source_path": "Source_Files > 00_Context/Shopify Admin BSI Brain Overview.md", "source_type": "md", "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Shopify Admin BSI Brain Overview__2a11c28154ee5bcf.md", "domain": "production_management", "workflow_stage": "planned", "kanban_status": "ready", "modified_time": "2026-06-12T14:29:48+07:00", "x": -463.197, "y": -545.989}, {"id": "domain::069343785fa0f16a", "label": "production_management", "kind": "domain", "group": "domain", "weight": 8.0, "count": 10, "x": -163.164, "y": -397.841}, {"id": "workflow::80e61027a7c98c34", "label": "planned", "kind": "workflow", "group": "workflow", "weight": 8.0, "count": 11, "x": 213.956, "y": -372.992}, {"id": "source::db2e7e2f9a47b4b0", "label": "Brain Owner and Executor Paths.md", "kind": "source", "group": "source", "weight": 2.8, "count": 0, "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Brain Owner and Executor Paths.md", "source_path": "Source_Files > 01_Governance/Brain Owner and Executor Paths.md", "source_type": "md", "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Brain Owner and Executor Paths__d0c257c2a310c9c4.md", "domain": "production_management", "workflow_stage": "planned", "kanban_status": "ready", "modified_time": "2026-06-12T14:50:43+07:00", "x": -480.733, "y": -542.697}, {"id": "source::c21bdb8ef595a1ac", "label": "Execution Chat Contract.md", "kind": "source", "group": "source", "weight": 2.8, "count": 0, "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Execution Chat Contract.md", "source_path": "Source_Files > 01_Governance/Execution Chat Contract.md", "source_type": "md", "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Execution Chat Contract__b9a048b19ffb7479.md", "domain": "production_management", "workflow_stage": "planned", "kanban_status": "ready", "modified_time": "2026-06-12T14:29:48+07:00", "x": -469.17, "y": -534.229}, {"id": "source::13b9ebd80620de7f", "label": "Governance and Ownership.md", "kind": "source", "group": "source", "weight": 2.8, "count": 0, "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Governance and Ownership.md", "source_path": "Source_Files > 01_Governance/Governance and Ownership.md", "source_type": "md", "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Governance and Ownership__c81af9a2fa78db1d.md", "domain": "production_management", "workflow_stage": "planned", "kanban_status": "ready", "modified_time": "2026-06-12T14:29:48+07:00", "x": -470.164, "y": -540.002}, {"id": "source::cca0720acee10597", "label": "Active Store Registry Snapshot.md", "kind": "source", "group": "source", "weight": 2.8, "count": 0, "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Active Store Registry Snapshot.md", "source_path": "Source_Files > 02_Operations/Active Store Registry Snapshot.md", "source_type": "md", "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Active Store Registry Snapshot__b18d07a7659c9ac0.md", "domain": "production_management", "workflow_stage": "planned", "kanban_status": "ready", "modified_time": "2026-06-12T14:50:43+07:00", "x": -483.716, "y": -541.382}, {"id": "source::8b07e32c6dc1a896", "label": "Run Profiles and Safety Gates.md", "kind": "source", "group": "source", "weight": 2.8, "count": 0, "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Run Profiles and Safety Gates.md", "source_path": "Source_Files > 02_Operations/Run Profiles and Safety Gates.md", "source_type": "md", "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Run Profiles and Safety Gates__bab91ca4bb845a38.md", "domain": "production_management", "workflow_stage": "planned", "kanban_status": "ready", "modified_time": "2026-06-12T14:29:48+07:00", "x": -467.478, "y": -546.283}, {"id": "source::216d8c8f0abae5f7", "label": "Shopify MCP and CLI Architecture.md", "kind": "source", "group": "source", "weight": 2.8, "count": 0, "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Shopify MCP and CLI Architecture.md", "source_path": "Source_Files > 02_Operations/Shopify MCP and CLI Architecture.md", "source_type": "md", "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Shopify MCP and CLI Architecture__366425f4accc600a.md", "domain": "production_management", "workflow_stage": "planned", "kanban_status": "ready", "modified_time": "2026-06-12T14:29:48+07:00", "x": -458.283, "y": -544.904}, {"id": "source::57b09e451da70c35", "label": "Store Registry Policy.md", "kind": "source", "group": "source", "weight": 2.8, "count": 0, "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Store Registry Policy.md", "source_path": "Source_Files > 02_Operations/Store Registry Policy.md", "source_type": "md", "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Store Registry Policy__364ab8e13fba61d8.md", "domain": "production_management", "workflow_stage": "planned", "kanban_status": "ready", "modified_time": "2026-06-12T14:29:48+07:00", "x": -448.904, "y": -538.41}, {"id": "source::458a97739c311b92", "label": "Bug Proposal Workflow.md", "kind": "source", "group": "source", "weight": 2.8, "count": 0, "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Bug Proposal Workflow.md", "source_path": "Source_Files > 03_Integrations/Bug Proposal Workflow.md", "source_type": "md", "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/workflow_project/planned/Bug Proposal Workflow__1bdd754b981b0df1.md", "domain": "workflow_project", "workflow_stage": "planned", "kanban_status": "ready", "modified_time": "2026-06-12T14:29:48+07:00", "x": 21.831, "y": -708.664}, {"id": "domain::8a1afee5a8754bbc", "label": "workflow_project", "kind": "domain", "group": "domain", "weight": 8, "count": 1, "x": 15.149, "y": -491.767}, {"id": "source::b2375ed78fddf549", "label": "Integration Analysis Frame.md", "kind": "source", "group": "source", "weight": 2.8, "count": 0, "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Integration Analysis Frame.md", "source_path": "Source_Files > 03_Integrations/Integration Analysis Frame.md", "source_type": "md", "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Integration Analysis Frame__fe9f71783f2775e1.md", "domain": "production_management", "workflow_stage": "planned", "kanban_status": "ready", "modified_time": "2026-06-12T14:29:48+07:00", "x": -462.623, "y": -535.952}, {"id": "source::23c2ed1debeea21d", "label": "Theme and Live Store Rules.md", "kind": "source", "group": "source", "weight": 2.8, "count": 0, "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Theme and Live Store Rules.md", "source_path": "Source_Files > 03_Integrations/Theme and Live Store Rules.md", "source_type": "md", "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Theme and Live Store Rules__f0968c262162e194.md", "domain": "production_management", "workflow_stage": "planned", "kanban_status": "ready", "modified_time": "2026-06-12T14:29:48+07:00", "x": -451.057, "y": -545.721}], "links": [{"source": "axis::domains", "target": "domain::069343785fa0f16a", "kind": "domain"}, {"source": "axis::domains", "target": "domain::8a1afee5a8754bbc", "kind": "domain"}, {"source": "axis::folders", "target": "folder::1a5985d60682e1a1", "kind": "folder"}, {"source": "axis::workflow", "target": "workflow::80e61027a7c98c34", "kind": "workflow"}, {"source": "domain::069343785fa0f16a", "target": "source::13b9ebd80620de7f", "kind": "contains"}, {"source": "domain::069343785fa0f16a", "target": "source::216d8c8f0abae5f7", "kind": "contains"}, {"source": "domain::069343785fa0f16a", "target": "source::23c2ed1debeea21d", "kind": "contains"}, {"source": "domain::069343785fa0f16a", "target": "source::57b09e451da70c35", "kind": "contains"}, {"source": "domain::069343785fa0f16a", "target": "source::8032943af39eca7f", "kind": "contains"}, {"source": "domain::069343785fa0f16a", "target": "source::8b07e32c6dc1a896", "kind": "contains"}, {"source": "domain::069343785fa0f16a", "target": "source::b2375ed78fddf549", "kind": "contains"}, {"source": "domain::069343785fa0f16a", "target": "source::c21bdb8ef595a1ac", "kind": "contains"}, {"source": "domain::069343785fa0f16a", "target": "source::cca0720acee10597", "kind": "contains"}, {"source": "domain::069343785fa0f16a", "target": "source::db2e7e2f9a47b4b0", "kind": "contains"}, {"source": "domain::8a1afee5a8754bbc", "target": "source::458a97739c311b92", "kind": "contains"}, {"source": "folder::1a5985d60682e1a1", "target": "source::13b9ebd80620de7f", "kind": "folder-source"}, {"source": "folder::1a5985d60682e1a1", "target": "source::216d8c8f0abae5f7", "kind": "folder-source"}, {"source": "folder::1a5985d60682e1a1", "target": "source::23c2ed1debeea21d", "kind": "folder-source"}, {"source": "folder::1a5985d60682e1a1", "target": "source::458a97739c311b92", "kind": "folder-source"}, {"source": "folder::1a5985d60682e1a1", "target": "source::57b09e451da70c35", "kind": "folder-source"}, {"source": "folder::1a5985d60682e1a1", "target": "source::8032943af39eca7f", "kind": "folder-source"}, {"source": "folder::1a5985d60682e1a1", "target": "source::8b07e32c6dc1a896", "kind": "folder-source"}, {"source": "folder::1a5985d60682e1a1", "target": "source::b2375ed78fddf549", "kind": "folder-source"}, {"source": "folder::1a5985d60682e1a1", "target": "source::c21bdb8ef595a1ac", "kind": "folder-source"}, {"source": "folder::1a5985d60682e1a1", "target": "source::cca0720acee10597", "kind": "folder-source"}, {"source": "folder::1a5985d60682e1a1", "target": "source::db2e7e2f9a47b4b0", "kind": "folder-source"}, {"source": "hub::brain", "target": "axis::domains", "kind": "axis"}, {"source": "hub::brain", "target": "axis::folders", "kind": "axis"}, {"source": "hub::brain", "target": "axis::material", "kind": "axis"}, {"source": "hub::brain", "target": "axis::mo", "kind": "axis"}, {"source": "hub::brain", "target": "axis::niche", "kind": "axis"}, {"source": "hub::brain", "target": "axis::sku", "kind": "axis"}, {"source": "hub::brain", "target": "axis::source", "kind": "axis"}, {"source": "hub::brain", "target": "axis::stage", "kind": "axis"}, {"source": "hub::brain", "target": "axis::supplier", "kind": "axis"}, {"source": "hub::brain", "target": "axis::workflow", "kind": "axis"}, {"source": "workflow::80e61027a7c98c34", "target": "source::13b9ebd80620de7f", "kind": "stage"}, {"source": "workflow::80e61027a7c98c34", "target": "source::216d8c8f0abae5f7", "kind": "stage"}, {"source": "workflow::80e61027a7c98c34", "target": "source::23c2ed1debeea21d", "kind": "stage"}, {"source": "workflow::80e61027a7c98c34", "target": "source::458a97739c311b92", "kind": "stage"}, {"source": "workflow::80e61027a7c98c34", "target": "source::57b09e451da70c35", "kind": "stage"}, {"source": "workflow::80e61027a7c98c34", "target": "source::8032943af39eca7f", "kind": "stage"}, {"source": "workflow::80e61027a7c98c34", "target": "source::8b07e32c6dc1a896", "kind": "stage"}, {"source": "workflow::80e61027a7c98c34", "target": "source::b2375ed78fddf549", "kind": "stage"}, {"source": "workflow::80e61027a7c98c34", "target": "source::c21bdb8ef595a1ac", "kind": "stage"}, {"source": "workflow::80e61027a7c98c34", "target": "source::cca0720acee10597", "kind": "stage"}, {"source": "workflow::80e61027a7c98c34", "target": "source::db2e7e2f9a47b4b0", "kind": "stage"}]};
+    const colors = {
+      system: '#f0c36a', axis: '#d8d0c3', folder: '#bfa06a', domain: '#7fb069',
+      workflow: '#8ab6d6', source: '#d7ded4', sku: '#f4845f', niche: '#9bcf88',
+      stage: '#70b7c7', material: '#c6a0d8', supplier: '#e4a86f', mo: '#e6dd82'
+    };
+    const groupLabels = {
+      system: 'System', axis: 'Axes', folder: 'Folder context', domain: 'Domains',
+      workflow: 'Workflow', source: 'Source files', sku: 'SKUs', niche: 'Products / niches',
+      stage: 'Product stages', material: 'Materials', supplier: 'Suppliers / factories', mo: 'MO / PO / LSX'
+    };
+    const canvas = document.getElementById('graph');
+    const ctx = canvas.getContext('2d');
+    const nodes = graph.nodes;
+    const links = graph.links;
+    const nodeById = Object.fromEntries(nodes.map(node => [node.id, node]));
+    const neighborIds = new Set();
+    let selected = nodeById['hub::brain'] || nodes[0];
+    let hover = null;
+    let query = '';
+    let activeGroups = new Set(Object.keys(colors));
+    let view = { x: 0, y: 0, k: 1 };
+    let dragging = false;
+    let last = null;
+
+    function cssColor(group) { return colors[group] || '#d7ded4'; }
+    function screen(node) { return { x: canvas.width / devicePixelRatio / 2 + (node.x * view.k) + view.x, y: canvas.height / devicePixelRatio / 2 + (node.y * view.k) + view.y }; }
+    function world(sx, sy) { return { x: (sx - canvas.width / devicePixelRatio / 2 - view.x) / view.k, y: (sy - canvas.height / devicePixelRatio / 2 - view.y) / view.k }; }
+    function radius(node) {
+      if (node.kind === 'hub') return 19;
+      if (node.kind === 'axis') return 10;
+      if (node.kind === 'source') return Math.max(1.4, Math.min(3.2, 1.2 + view.k));
+      return Math.max(5, Math.min(13, 4 + Math.sqrt(Math.max(1, node.count || node.weight || 1))));
+    }
+    function matches(node) {
+      if (!activeGroups.has(node.group)) return false;
+      if (!query) return true;
+      const hay = [node.label, node.kind, node.group, node.domain, node.workflow_stage, node.source_path, node.source_url, node.raw_value].filter(Boolean).join(' ').toLowerCase();
+      return hay.includes(query);
+    }
+    function selectedNeighborhood() {
+      neighborIds.clear();
+      if (!selected) return;
+      neighborIds.add(selected.id);
+      for (const link of links) {
+        if (link.source === selected.id) neighborIds.add(link.target);
+        if (link.target === selected.id) neighborIds.add(link.source);
+      }
+    }
+    function draw() {
+      const w = canvas.width / devicePixelRatio;
+      const h = canvas.height / devicePixelRatio;
+      ctx.clearRect(0, 0, w, h);
+      ctx.save();
+      ctx.lineCap = 'round';
+      selectedNeighborhood();
+      for (const link of links) {
+        const a = nodeById[link.source];
+        const b = nodeById[link.target];
+        if (!a || !b || !activeGroups.has(a.group) || !activeGroups.has(b.group)) continue;
+        const highlight = selected && (link.source === selected.id || link.target === selected.id);
+        if (query && !matches(a) && !matches(b) && !highlight) continue;
+        if (!highlight && a.kind === 'source' && b.kind === 'source') continue;
+        const p1 = screen(a);
+        const p2 = screen(b);
+        ctx.globalAlpha = highlight ? .72 : (a.kind === 'source' || b.kind === 'source' ? .08 : .22);
+        ctx.strokeStyle = highlight ? '#f0c36a' : 'rgba(222,232,218,.5)';
+        ctx.lineWidth = highlight ? 1.8 : .8;
+        ctx.beginPath();
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+      for (const node of nodes) {
+        if (!matches(node)) continue;
+        const p = screen(node);
+        const r = radius(node);
+        const isSelected = selected && selected.id === node.id;
+        const isNeighbor = neighborIds.has(node.id);
+        ctx.globalAlpha = query || isSelected || isNeighbor || node.kind !== 'source' ? 1 : .48;
+        ctx.fillStyle = cssColor(node.group);
+        ctx.strokeStyle = isSelected ? '#ffffff' : (isNeighbor ? '#f0c36a' : 'rgba(15,19,17,.72)');
+        ctx.lineWidth = isSelected ? 3 : (isNeighbor ? 1.8 : .8);
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+        const shouldLabel = isSelected || node.kind === 'hub' || node.kind === 'axis' || (node.kind !== 'source' && view.k > .42) || (query && node.kind !== 'source');
+        if (shouldLabel) {
+          ctx.globalAlpha = 1;
+          ctx.font = node.kind === 'hub' ? '700 15px system-ui' : '650 11px system-ui';
+          ctx.fillStyle = '#edf2ea';
+          ctx.textAlign = 'center';
+          const label = node.label.length > 28 ? node.label.slice(0, 27) + '...' : node.label;
+          ctx.fillText(label, p.x, p.y - r - 7);
+        }
+      }
+      ctx.restore();
+    }
+    function fit() {
+      const visible = nodes.filter(node => activeGroups.has(node.group));
+      const xs = visible.map(node => node.x);
+      const ys = visible.map(node => node.y);
+      const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
+      const w = canvas.width / devicePixelRatio;
+      const h = canvas.height / devicePixelRatio;
+      view.k = Math.min(w / Math.max(1, maxX - minX + 220), h / Math.max(1, maxY - minY + 220));
+      view.x = -((minX + maxX) / 2) * view.k;
+      view.y = -((minY + maxY) / 2) * view.k;
+      draw();
+    }
+    function resize() {
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = Math.max(1, Math.floor(rect.width * devicePixelRatio));
+      canvas.height = Math.max(1, Math.floor(rect.height * devicePixelRatio));
+      ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+      fit();
+    }
+    function hitTest(x, y) {
+      const pt = world(x, y);
+      let best = null;
+      let bestDist = Infinity;
+      for (const node of nodes) {
+        if (!matches(node)) continue;
+        const dx = node.x - pt.x;
+        const dy = node.y - pt.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const limit = Math.max(8 / view.k, radius(node) / view.k + 8 / view.k);
+        if (dist < limit && dist < bestDist) { best = node; bestDist = dist; }
+      }
+      return best;
+    }
+    function select(node) {
+      selected = node || selected;
+      selectedNeighborhood();
+      renderDetail();
+      draw();
+    }
+    function renderDetail() {
+      const el = document.getElementById('detail');
+      if (!selected) { el.innerHTML = ''; return; }
+      const linked = links.filter(link => link.source === selected.id || link.target === selected.id).length;
+      const sourceUrl = selected.source_url ? `<a href="${selected.source_url}" target="_blank" rel="noreferrer">${selected.source_url}</a>` : '';
+      const vaultPath = selected.vault_path ? `<code>${selected.vault_path}</code>` : '';
+      const sourcePath = selected.source_path ? `<code>${selected.source_path}</code>` : '';
+      el.innerHTML = `
+        <div class="detail-title">${escapeHtml(selected.label)}</div>
+        <span class="pill">${escapeHtml(selected.kind || '')}</span>
+        <span class="pill">${escapeHtml(groupLabels[selected.group] || selected.group || '')}</span>
+        <span class="pill">${linked.toLocaleString()} links</span>
+        <div class="kv">
+          <div><span>Count</span>${(selected.count || 0).toLocaleString()}</div>
+          <div><span>Domain</span>${escapeHtml(selected.domain || '')}</div>
+          <div><span>Workflow</span>${escapeHtml(selected.workflow_stage || '')}</div>
+          <div><span>Status</span>${escapeHtml(selected.kanban_status || '')}</div>
+          <div><span>Source path</span>${sourcePath}</div>
+          <div><span>Vault path</span>${vaultPath}</div>
+          <div><span>Google source</span>${sourceUrl}</div>
+        </div>`;
+    }
+    function escapeHtml(value) {
+      return String(value || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    }
+    function renderToggles() {
+      const root = document.getElementById('toggles');
+      const groups = Object.keys(colors).filter(group => graph.summary.groups[group]);
+      root.innerHTML = groups.map(group => `
+        <div class="toggle">
+          <span><i class="swatch" style="background:${colors[group]}"></i>${groupLabels[group] || group} (${graph.summary.groups[group].toLocaleString()})</span>
+          <button class="active" data-group="${group}">On</button>
+        </div>`).join('');
+      root.querySelectorAll('button').forEach(button => {
+        button.addEventListener('click', () => {
+          const group = button.dataset.group;
+          if (activeGroups.has(group)) {
+            activeGroups.delete(group);
+            button.textContent = 'Off';
+            button.classList.remove('active');
+          } else {
+            activeGroups.add(group);
+            button.textContent = 'On';
+            button.classList.add('active');
+          }
+          draw();
+        });
+      });
+    }
+    canvas.addEventListener('mousedown', event => { dragging = true; last = { x: event.clientX, y: event.clientY }; });
+    window.addEventListener('mouseup', () => { dragging = false; last = null; });
+    canvas.addEventListener('mousemove', event => {
+      if (dragging && last) {
+        view.x += event.clientX - last.x;
+        view.y += event.clientY - last.y;
+        last = { x: event.clientX, y: event.clientY };
+        draw();
+      } else {
+        hover = hitTest(event.offsetX, event.offsetY);
+        canvas.style.cursor = hover ? 'pointer' : 'grab';
+      }
+    });
+    canvas.addEventListener('click', event => {
+      const node = hitTest(event.offsetX, event.offsetY);
+      if (node) select(node);
+    });
+    canvas.addEventListener('wheel', event => {
+      event.preventDefault();
+      const before = world(event.offsetX, event.offsetY);
+      const factor = event.deltaY < 0 ? 1.12 : .89;
+      view.k = Math.max(.08, Math.min(3.5, view.k * factor));
+      const after = world(event.offsetX, event.offsetY);
+      view.x += (after.x - before.x) * view.k;
+      view.y += (after.y - before.y) * view.k;
+      draw();
+    }, { passive: false });
+    document.getElementById('zoomIn').addEventListener('click', () => { view.k = Math.min(3.5, view.k * 1.2); draw(); });
+    document.getElementById('zoomOut').addEventListener('click', () => { view.k = Math.max(.08, view.k / 1.2); draw(); });
+    document.getElementById('reset').addEventListener('click', fit);
+    document.getElementById('search').addEventListener('input', event => {
+      query = event.target.value.trim().toLowerCase();
+      const first = query ? nodes.find(matches) : selected;
+      if (first) selected = first;
+      renderDetail();
+      draw();
+    });
+    renderToggles();
+    renderDetail();
+    window.addEventListener('resize', resize);
+    resize();
+  </script>
+</body>
+</html>

@@ -40,6 +40,15 @@ make shopify
 
 # Chỉ Agents
 make agents
+
+# Copy local programs
+make local-programs
+
+# Setup auth profiles
+make auth
+
+# Setup plugins
+make plugins
 ```
 
 ## Sau khi cài đặt

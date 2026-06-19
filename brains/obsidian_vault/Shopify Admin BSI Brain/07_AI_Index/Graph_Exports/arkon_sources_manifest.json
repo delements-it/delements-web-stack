@@ -1,0 +1,210 @@
+{
+  "generated_at": "2026-06-12T14:51:49+07:00",
+  "intended_system": "Arkon-style knowledge ingestion",
+  "scope": {
+    "department": "Shopify Admin BSI Brain",
+    "workspace": "Shopify Admin Bsi Brain Brain",
+    "visibility": "local"
+  },
+  "identity_rule": "Google source URL or file ID is the durable identity. File names are not unique.",
+  "sources": [
+    {
+      "id": "gdrive_2a11c28154ee5bcf",
+      "title": "Shopify Admin BSI Brain Overview.md",
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/00_Context/Shopify Admin BSI Brain Overview.md",
+      "source_path": "Source_Files > 00_Context/Shopify Admin BSI Brain Overview.md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Shopify Admin BSI Brain Overview__2a11c28154ee5bcf.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "entities": {
+        "mo_code": [],
+        "sku_codes": [],
+        "niches": [],
+        "product_stages": [],
+        "materials": [],
+        "suppliers_factories": []
+      }
+    },
+    {
+      "id": "gdrive_d0c257c2a310c9c4",
+      "title": "Brain Owner and Executor Paths.md",
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Brain Owner and Executor Paths.md",
+      "source_path": "Source_Files > 01_Governance/Brain Owner and Executor Paths.md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Brain Owner and Executor Paths__d0c257c2a310c9c4.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "entities": {
+        "mo_code": [],
+        "sku_codes": [],
+        "niches": [],
+        "product_stages": [],
+        "materials": [],
+        "suppliers_factories": []
+      }
+    },
+    {
+      "id": "gdrive_b9a048b19ffb7479",
+      "title": "Execution Chat Contract.md",
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Execution Chat Contract.md",
+      "source_path": "Source_Files > 01_Governance/Execution Chat Contract.md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Execution Chat Contract__b9a048b19ffb7479.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "entities": {
+        "mo_code": [],
+        "sku_codes": [],
+        "niches": [],
+        "product_stages": [],
+        "materials": [],
+        "suppliers_factories": []
+      }
+    },
+    {
+      "id": "gdrive_c81af9a2fa78db1d",
+      "title": "Governance and Ownership.md",
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Governance and Ownership.md",
+      "source_path": "Source_Files > 01_Governance/Governance and Ownership.md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Governance and Ownership__c81af9a2fa78db1d.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "entities": {
+        "mo_code": [],
+        "sku_codes": [],
+        "niches": [],
+        "product_stages": [],
+        "materials": [],
+        "suppliers_factories": []
+      }
+    },
+    {
+      "id": "gdrive_b18d07a7659c9ac0",
+      "title": "Active Store Registry Snapshot.md",
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Active Store Registry Snapshot.md",
+      "source_path": "Source_Files > 02_Operations/Active Store Registry Snapshot.md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Active Store Registry Snapshot__b18d07a7659c9ac0.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "entities": {
+        "mo_code": [],
+        "sku_codes": [],
+        "niches": [],
+        "product_stages": [],
+        "materials": [],
+        "suppliers_factories": []
+      }
+    },
+    {
+      "id": "gdrive_bab91ca4bb845a38",
+      "title": "Run Profiles and Safety Gates.md",
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Run Profiles and Safety Gates.md",
+      "source_path": "Source_Files > 02_Operations/Run Profiles and Safety Gates.md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Run Profiles and Safety Gates__bab91ca4bb845a38.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "entities": {
+        "mo_code": [],
+        "sku_codes": [],
+        "niches": [],
+        "product_stages": [],
+        "materials": [],
+        "suppliers_factories": []
+      }
+    },
+    {
+      "id": "gdrive_366425f4accc600a",
+      "title": "Shopify MCP and CLI Architecture.md",
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Shopify MCP and CLI Architecture.md",
+      "source_path": "Source_Files > 02_Operations/Shopify MCP and CLI Architecture.md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Shopify MCP and CLI Architecture__366425f4accc600a.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "entities": {
+        "mo_code": [],
+        "sku_codes": [],
+        "niches": [],
+        "product_stages": [],
+        "materials": [],
+        "suppliers_factories": []
+      }
+    },
+    {
+      "id": "gdrive_364ab8e13fba61d8",
+      "title": "Store Registry Policy.md",
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Store Registry Policy.md",
+      "source_path": "Source_Files > 02_Operations/Store Registry Policy.md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Store Registry Policy__364ab8e13fba61d8.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "entities": {
+        "mo_code": [],
+        "sku_codes": [],
+        "niches": [],
+        "product_stages": [],
+        "materials": [],
+        "suppliers_factories": []
+      }
+    },
+    {
+      "id": "gdrive_1bdd754b981b0df1",
+      "title": "Bug Proposal Workflow.md",
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Bug Proposal Workflow.md",
+      "source_path": "Source_Files > 03_Integrations/Bug Proposal Workflow.md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/workflow_project/planned/Bug Proposal Workflow__1bdd754b981b0df1.md",
+      "domain": "workflow_project",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "entities": {
+        "mo_code": [],
+        "sku_codes": [],
+        "niches": [],
+        "product_stages": [],
+        "materials": [],
+        "suppliers_factories": []
+      }
+    },
+    {
+      "id": "gdrive_fe9f71783f2775e1",
+      "title": "Integration Analysis Frame.md",
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Integration Analysis Frame.md",
+      "source_path": "Source_Files > 03_Integrations/Integration Analysis Frame.md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Integration Analysis Frame__fe9f71783f2775e1.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "entities": {
+        "mo_code": [],
+        "sku_codes": [],
+        "niches": [],
+        "product_stages": [],
+        "materials": [],
+        "suppliers_factories": []
+      }
+    },
+    {
+      "id": "gdrive_f0968c262162e194",
+      "title": "Theme and Live Store Rules.md",
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Theme and Live Store Rules.md",
+      "source_path": "Source_Files > 03_Integrations/Theme and Live Store Rules.md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Theme and Live Store Rules__f0968c262162e194.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "entities": {
+        "mo_code": [],
+        "sku_codes": [],
+        "niches": [],
+        "product_stages": [],
+        "materials": [],
+        "suppliers_factories": []
+      }
+    }
+  ]
+}

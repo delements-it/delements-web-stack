@@ -1,0 +1,24 @@
+{
+  "codex_bin": "codex",
+  "mcp_server_name": "webflow",
+  "chrome_app": "Google Chrome",
+  "chrome_profile_directory": "Profile 3",
+  "chrome_profile_label": "IT Helpdesk",
+  "chrome_profile_email": "it.helpdesk@delements.co",
+  "webflow_dashboard_url": "https://webflow.com/dashboard",
+  "default_workdir": "/Users/delements/Documents/Business Systems Integration",
+  "shared_context_files": [
+    "/Users/delements/Documents/Business Systems Integration/AGENTS.md",
+    "/Users/delements/Documents/Business Systems Integration/PROJECT_CONTEXT.md"
+  ],
+  "default_model": "gpt-5.4",
+  "default_sandbox": "danger-full-access",
+  "default_approval": "never",
+  "prompt_preamble": [
+    "This run is the shared Webflow MCP execution path for Admin BSI.",
+    "Use Codex for thinking and task handling.",
+    "Use Webflow MCP when callable in this run.",
+    "Use the Business Systems Integration governance context as the approval authority for Webflow work in scope.",
+    "If Webflow MCP is unavailable or unauthenticated, say so clearly instead of inventing Webflow actions."
+  ]
+}

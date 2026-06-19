@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuron Knowledge Dashboard</title>
+  <style>
+    :root { color-scheme: dark; --bg:#05080c; --panel:#0d141c; --line:#26384c; --text:#d8e6f3; --muted:#8aa0b8; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; background:var(--bg); color:var(--text); font:13px/1.4 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; overflow:hidden; }
+    .app { display:grid; grid-template-columns:290px 1fr 330px; height:100vh; }
+    aside { background:#071018; border-right:1px solid #172330; padding:14px; overflow:auto; }
+    aside.right { border-right:0; border-left:1px solid #172330; }
+    h1 { margin:0 0 10px; font-size:16px; font-weight:650; }
+    h2 { margin:18px 0 8px; font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+    button, input { background:#0e1a24; color:var(--text); border:1px solid #223244; border-radius:6px; padding:8px 10px; }
+    button { cursor:pointer; }
+    .controls { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin:10px 0; }
+    .legend { display:grid; gap:8px; }
+    .legend label { display:flex; align-items:center; gap:8px; color:#b8c8d8; }
+    .swatch { width:10px; height:10px; border-radius:50%; display:inline-block; }
+    main { position:relative; overflow:hidden; background:radial-gradient(circle at 50% 48%, #101723 0%, #05080c 60%); }
+    svg { width:100%; height:100%; display:block; cursor:grab; }
+    svg.dragging { cursor:grabbing; }
+    .edge { stroke:#38516b; stroke-width:1; opacity:.45; }
+    .edge.active { stroke:#9bdcff; stroke-width:2; opacity:.95; }
+    .node circle { stroke:#bfe8ff; stroke-opacity:.28; }
+    .node text { fill:#dcecff; font-size:11px; pointer-events:none; opacity:.82; paint-order:stroke; stroke:#05080c; stroke-width:4px; }
+    .node.template text { opacity:0; }
+    .node.active text, .node:hover text { opacity:1; }
+    .node.dim { opacity:.18; }
+    .edge.dim { opacity:.06; }
+    .stats { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    .metric { background:#0a131d; border:1px solid #172638; border-radius:8px; padding:10px; }
+    .metric strong { display:block; font-size:18px; }
+    .detail { background:#0a131d; border:1px solid #172638; border-radius:8px; padding:12px; min-height:180px; }
+    .links { display:grid; gap:6px; margin-top:8px; }
+    .links button { text-align:left; }
+    @media (max-width: 900px) { .app { grid-template-columns:1fr; grid-template-rows:auto 1fr auto; } aside { max-height:34vh; border-right:0; border-bottom:1px solid #172330; } aside.right { border-left:0; border-top:1px solid #172330; } }
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <h1>Neuron Knowledge Dashboard</h1>
+    <input id="search" placeholder="Search nodes" style="width:100%">
+    <div class="controls">
+      <button id="zoomIn">+</button>
+      <button id="zoomOut">-</button>
+      <button id="reset">1:1</button>
+    </div>
+    <div class="stats">
+      <div class="metric"><strong id="nodeCount">0</strong><span>nodes</span></div>
+      <div class="metric"><strong id="linkCount">0</strong><span>links</span></div>
+    </div>
+    <h2>Groups</h2>
+    <div class="legend" id="legend"></div>
+  </aside>
+  <main><svg id="graph" viewBox="-520 -520 1040 1040" role="img" aria-label="Neuron knowledge graph"></svg></main>
+  <aside class="right">
+    <h1>Node Detail</h1>
+    <div class="detail" id="detail">Click a node to inspect direct links.</div>
+  </aside>
+</div>
+<script>
+const graph = {"schema": "neuron-template-2026.05.24", "created_at": "2026-06-12T14:51:49+07:00", "description": "Merged neuron-style Obsidian brain template graph.", "colors": {"system": "#8bd5ff", "capture": "#ff4d6d", "source": "#ffb000", "distill": "#65d46e", "concept": "#8a8cff", "inquiry": "#d783ff", "action": "#58d7c3", "context": "#f5a3cb", "output": "#d5e76f"}, "nodes": [{"id": "template::brain", "title": "Knowledge Brain Template", "kind": "hub", "group": "system", "description": "Root map for the local Obsidian brain. Every node is a reusable knowledge template.", "weight": 18, "x": 0, "y": 0}, {"id": "cluster::capture", "title": "Capture Layer", "kind": "cluster", "group": "capture", "description": "Organizes capture templates for the Obsidian brain.", "weight": 12, "x": 0.0, "y": -330.0}, {"id": "node::capture::inbox-capture", "title": "Inbox Capture", "kind": "template", "group": "capture", "description": "Inbox Capture template in the capture layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -66.801, "y": -401.706}, {"id": "node::capture::daily-note", "title": "Daily Note", "kind": "template", "group": "capture", "description": "Daily Note template in the capture layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -46.984, "y": -416.003}, {"id": "node::capture::quick-idea", "title": "Quick Idea", "kind": "template", "group": "capture", "description": "Quick Idea template in the capture layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -24.246, "y": -424.953}, {"id": "node::capture::voice-memo", "title": "Voice Memo", "kind": "template", "group": "capture", "description": "Voice Memo template in the capture layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 0.0, "y": -428.0}, {"id": "node::capture::screenshot", "title": "Screenshot", "kind": "template", "group": "capture", "description": "Screenshot template in the capture layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 24.246, "y": -424.953}, {"id": "node::capture::web-clip", "title": "Web Clip", "kind": "template", "group": "capture", "description": "Web Clip template in the capture layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 46.984, "y": -416.003}, {"id": "node::capture::raw-import", "title": "Raw Import", "kind": "template", "group": "capture", "description": "Raw Import template in the capture layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 66.801, "y": -401.706}, {"id": "cluster::source", "title": "Source Layer", "kind": "cluster", "group": "source", "description": "Organizes source templates for the Obsidian brain.", "weight": 12, "x": 233.345, "y": -233.345}, {"id": "node::source::book-source", "title": "Book Source", "kind": "template", "group": "source", "description": "Book Source template in the source layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 224.576, "y": -330.952}, {"id": "node::source::article-source", "title": "Article Source", "kind": "template", "group": "source", "description": "Article Source template in the source layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 248.997, "y": -330.087}, {"id": "node::source::pdf-highlight", "title": "PDF Highlight", "kind": "template", "group": "source", "description": "PDF Highlight template in the source layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 272.444, "y": -323.207}, {"id": "node::source::video-source", "title": "Video Source", "kind": "template", "group": "source", "description": "Video Source template in the source layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 293.461, "y": -310.74}, {"id": "node::source::podcast-source", "title": "Podcast Source", "kind": "template", "group": "source", "description": "Podcast Source template in the source layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 310.74, "y": -293.461}, {"id": "node::source::course-note", "title": "Course Note", "kind": "template", "group": "source", "description": "Course Note template in the source layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 323.207, "y": -272.444}, {"id": "node::source::dataset-source", "title": "Dataset Source", "kind": "template", "group": "source", "description": "Dataset Source template in the source layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 330.087, "y": -248.997}, {"id": "node::source::repository-source", "title": "Repository Source", "kind": "template", "group": "source", "description": "Repository Source template in the source layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 330.952, "y": -224.576}, {"id": "cluster::distill", "title": "Distillation Layer", "kind": "cluster", "group": "distill", "description": "Organizes distill templates for the Obsidian brain.", "weight": 12, "x": 330.0, "y": 0.0}, {"id": "node::distill::literature-note", "title": "Literature Note", "kind": "template", "group": "distill", "description": "Literature Note template in the distill layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 392.818, "y": -75.219}, {"id": "node::distill::atomic-note", "title": "Atomic Note", "kind": "template", "group": "distill", "description": "Atomic Note template in the distill layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 409.474, "y": -57.34}, {"id": "node::distill::evergreen-note", "title": "Evergreen Note", "kind": "template", "group": "distill", "description": "Evergreen Note template in the distill layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 421.19, "y": -35.895}, {"id": "node::distill::summary", "title": "Summary", "kind": "template", "group": "distill", "description": "Summary template in the distill layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 427.235, "y": -12.218}, {"id": "node::distill::quote", "title": "Quote", "kind": "template", "group": "distill", "description": "Quote template in the distill layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 427.235, "y": 12.218}, {"id": "node::distill::annotation", "title": "Annotation", "kind": "template", "group": "distill", "description": "Annotation template in the distill layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 421.19, "y": 35.895}, {"id": "node::distill::definition", "title": "Definition", "kind": "template", "group": "distill", "description": "Definition template in the distill layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 409.474, "y": 57.34}, {"id": "node::distill::glossary-term", "title": "Glossary Term", "kind": "template", "group": "distill", "description": "Glossary Term template in the distill layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 392.818, "y": 75.219}, {"id": "cluster::concept", "title": "Concept Layer", "kind": "cluster", "group": "concept", "description": "Organizes concept templates for the Obsidian brain.", "weight": 12, "x": 233.345, "y": 233.345}, {"id": "node::concept::concept", "title": "Concept", "kind": "template", "group": "concept", "description": "Concept template in the concept layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 330.952, "y": 224.576}, {"id": "node::concept::principle", "title": "Principle", "kind": "template", "group": "concept", "description": "Principle template in the concept layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 330.087, "y": 248.997}, {"id": "node::concept::mental-model", "title": "Mental Model", "kind": "template", "group": "concept", "description": "Mental Model template in the concept layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 323.207, "y": 272.444}, {"id": "node::concept::framework", "title": "Framework", "kind": "template", "group": "concept", "description": "Framework template in the concept layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 310.74, "y": 293.461}, {"id": "node::concept::pattern", "title": "Pattern", "kind": "template", "group": "concept", "description": "Pattern template in the concept layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 293.461, "y": 310.74}, {"id": "node::concept::method", "title": "Method", "kind": "template", "group": "concept", "description": "Method template in the concept layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 272.444, "y": 323.207}, {"id": "node::concept::system-map", "title": "System Map", "kind": "template", "group": "concept", "description": "System Map template in the concept layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 248.997, "y": 330.087}, {"id": "node::concept::topic-moc", "title": "Topic MOC", "kind": "template", "group": "concept", "description": "Topic MOC template in the concept layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 224.576, "y": 330.952}, {"id": "cluster::inquiry", "title": "Inquiry Layer", "kind": "cluster", "group": "inquiry", "description": "Organizes inquiry templates for the Obsidian brain.", "weight": 12, "x": 0.0, "y": 330.0}, {"id": "node::inquiry::question", "title": "Question", "kind": "template", "group": "inquiry", "description": "Question template in the inquiry layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 75.219, "y": 392.818}, {"id": "node::inquiry::hypothesis", "title": "Hypothesis", "kind": "template", "group": "inquiry", "description": "Hypothesis template in the inquiry layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 57.34, "y": 409.474}, {"id": "node::inquiry::claim", "title": "Claim", "kind": "template", "group": "inquiry", "description": "Claim template in the inquiry layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 35.895, "y": 421.19}, {"id": "node::inquiry::evidence", "title": "Evidence", "kind": "template", "group": "inquiry", "description": "Evidence template in the inquiry layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": 12.218, "y": 427.235}, {"id": "node::inquiry::counterargument", "title": "Counterargument", "kind": "template", "group": "inquiry", "description": "Counterargument template in the inquiry layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -12.218, "y": 427.235}, {"id": "node::inquiry::assumption", "title": "Assumption", "kind": "template", "group": "inquiry", "description": "Assumption template in the inquiry layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -35.895, "y": 421.19}, {"id": "node::inquiry::decision", "title": "Decision", "kind": "template", "group": "inquiry", "description": "Decision template in the inquiry layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -57.34, "y": 409.474}, {"id": "node::inquiry::open-loop", "title": "Open Loop", "kind": "template", "group": "inquiry", "description": "Open Loop template in the inquiry layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -75.219, "y": 392.818}, {"id": "cluster::action", "title": "Action Layer", "kind": "cluster", "group": "action", "description": "Organizes action templates for the Obsidian brain.", "weight": 12, "x": -233.345, "y": 233.345}, {"id": "node::action::project", "title": "Project", "kind": "template", "group": "action", "description": "Project template in the action layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -224.576, "y": 330.952}, {"id": "node::action::goal", "title": "Goal", "kind": "template", "group": "action", "description": "Goal template in the action layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -248.997, "y": 330.087}, {"id": "node::action::milestone", "title": "Milestone", "kind": "template", "group": "action", "description": "Milestone template in the action layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -272.444, "y": 323.207}, {"id": "node::action::task", "title": "Task", "kind": "template", "group": "action", "description": "Task template in the action layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -293.461, "y": 310.74}, {"id": "node::action::experiment", "title": "Experiment", "kind": "template", "group": "action", "description": "Experiment template in the action layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -310.74, "y": 293.461}, {"id": "node::action::sop", "title": "SOP", "kind": "template", "group": "action", "description": "SOP template in the action layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -323.207, "y": 272.444}, {"id": "node::action::checklist", "title": "Checklist", "kind": "template", "group": "action", "description": "Checklist template in the action layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -330.087, "y": 248.997}, {"id": "node::action::review", "title": "Review", "kind": "template", "group": "action", "description": "Review template in the action layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -330.952, "y": 224.576}, {"id": "cluster::context", "title": "Context Layer", "kind": "cluster", "group": "context", "description": "Organizes context templates for the Obsidian brain.", "weight": 12, "x": -330.0, "y": 0.0}, {"id": "node::context::person", "title": "Person", "kind": "template", "group": "context", "description": "Person template in the context layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -392.818, "y": 75.219}, {"id": "node::context::organization", "title": "Organization", "kind": "template", "group": "context", "description": "Organization template in the context layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -409.474, "y": 57.34}, {"id": "node::context::tool", "title": "Tool", "kind": "template", "group": "context", "description": "Tool template in the context layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -421.19, "y": 35.895}, {"id": "node::context::skill", "title": "Skill", "kind": "template", "group": "context", "description": "Skill template in the context layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -427.235, "y": 12.218}, {"id": "node::context::prompt", "title": "Prompt", "kind": "template", "group": "context", "description": "Prompt template in the context layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -427.235, "y": -12.218}, {"id": "node::context::meeting", "title": "Meeting", "kind": "template", "group": "context", "description": "Meeting template in the context layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -421.19, "y": -35.895}, {"id": "node::context::conversation", "title": "Conversation", "kind": "template", "group": "context", "description": "Conversation template in the context layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -409.474, "y": -57.34}, {"id": "node::context::account", "title": "Account", "kind": "template", "group": "context", "description": "Account template in the context layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -392.818, "y": -75.219}, {"id": "cluster::output", "title": "Output Layer", "kind": "cluster", "group": "output", "description": "Organizes output templates for the Obsidian brain.", "weight": 12, "x": -233.345, "y": -233.345}, {"id": "node::output::dashboard", "title": "Dashboard", "kind": "template", "group": "output", "description": "Dashboard template in the output layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -331.284, "y": -236.813}, {"id": "node::output::index", "title": "Index", "kind": "template", "group": "output", "description": "Index template in the output layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -327.381, "y": -260.936}, {"id": "node::output::newsletter-draft", "title": "Newsletter Draft", "kind": "template", "group": "output", "description": "Newsletter Draft template in the output layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -317.631, "y": -283.343}, {"id": "node::output::article-draft", "title": "Article Draft", "kind": "template", "group": "output", "description": "Article Draft template in the output layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -302.641, "y": -302.641}, {"id": "node::output::video-script", "title": "Video Script", "kind": "template", "group": "output", "description": "Video Script template in the output layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -283.343, "y": -317.631}, {"id": "node::output::research-report", "title": "Research Report", "kind": "template", "group": "output", "description": "Research Report template in the output layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -260.936, "y": -327.381}, {"id": "node::output::archive", "title": "Archive", "kind": "template", "group": "output", "description": "Archive template in the output layer. Fill it with real knowledge, then link it to adjacent nodes.", "weight": 5, "x": -236.813, "y": -331.284}], "links": [{"source": "template::brain", "target": "cluster::capture", "type": "layer"}, {"source": "cluster::capture", "target": "node::capture::inbox-capture", "type": "contains"}, {"source": "cluster::capture", "target": "node::capture::daily-note", "type": "contains"}, {"source": "cluster::capture", "target": "node::capture::quick-idea", "type": "contains"}, {"source": "cluster::capture", "target": "node::capture::voice-memo", "type": "contains"}, {"source": "cluster::capture", "target": "node::capture::screenshot", "type": "contains"}, {"source": "cluster::capture", "target": "node::capture::web-clip", "type": "contains"}, {"source": "cluster::capture", "target": "node::capture::raw-import", "type": "contains"}, {"source": "template::brain", "target": "cluster::source", "type": "layer"}, {"source": "cluster::capture", "target": "cluster::source", "type": "workflow"}, {"source": "cluster::source", "target": "node::source::book-source", "type": "contains"}, {"source": "cluster::source", "target": "node::source::article-source", "type": "contains"}, {"source": "cluster::source", "target": "node::source::pdf-highlight", "type": "contains"}, {"source": "cluster::source", "target": "node::source::video-source", "type": "contains"}, {"source": "cluster::source", "target": "node::source::podcast-source", "type": "contains"}, {"source": "cluster::source", "target": "node::source::course-note", "type": "contains"}, {"source": "cluster::source", "target": "node::source::dataset-source", "type": "contains"}, {"source": "cluster::source", "target": "node::source::repository-source", "type": "contains"}, {"source": "template::brain", "target": "cluster::distill", "type": "layer"}, {"source": "cluster::source", "target": "cluster::distill", "type": "workflow"}, {"source": "cluster::distill", "target": "node::distill::literature-note", "type": "contains"}, {"source": "cluster::distill", "target": "node::distill::atomic-note", "type": "contains"}, {"source": "cluster::distill", "target": "node::distill::evergreen-note", "type": "contains"}, {"source": "cluster::distill", "target": "node::distill::summary", "type": "contains"}, {"source": "cluster::distill", "target": "node::distill::quote", "type": "contains"}, {"source": "cluster::distill", "target": "node::distill::annotation", "type": "contains"}, {"source": "cluster::distill", "target": "node::distill::definition", "type": "contains"}, {"source": "cluster::distill", "target": "node::distill::glossary-term", "type": "contains"}, {"source": "template::brain", "target": "cluster::concept", "type": "layer"}, {"source": "cluster::distill", "target": "cluster::concept", "type": "workflow"}, {"source": "cluster::concept", "target": "node::concept::concept", "type": "contains"}, {"source": "cluster::concept", "target": "node::concept::principle", "type": "contains"}, {"source": "cluster::concept", "target": "node::concept::mental-model", "type": "contains"}, {"source": "cluster::concept", "target": "node::concept::framework", "type": "contains"}, {"source": "cluster::concept", "target": "node::concept::pattern", "type": "contains"}, {"source": "cluster::concept", "target": "node::concept::method", "type": "contains"}, {"source": "cluster::concept", "target": "node::concept::system-map", "type": "contains"}, {"source": "cluster::concept", "target": "node::concept::topic-moc", "type": "contains"}, {"source": "template::brain", "target": "cluster::inquiry", "type": "layer"}, {"source": "cluster::concept", "target": "cluster::inquiry", "type": "workflow"}, {"source": "cluster::inquiry", "target": "node::inquiry::question", "type": "contains"}, {"source": "cluster::inquiry", "target": "node::inquiry::hypothesis", "type": "contains"}, {"source": "cluster::inquiry", "target": "node::inquiry::claim", "type": "contains"}, {"source": "cluster::inquiry", "target": "node::inquiry::evidence", "type": "contains"}, {"source": "cluster::inquiry", "target": "node::inquiry::counterargument", "type": "contains"}, {"source": "cluster::inquiry", "target": "node::inquiry::assumption", "type": "contains"}, {"source": "cluster::inquiry", "target": "node::inquiry::decision", "type": "contains"}, {"source": "cluster::inquiry", "target": "node::inquiry::open-loop", "type": "contains"}, {"source": "template::brain", "target": "cluster::action", "type": "layer"}, {"source": "cluster::inquiry", "target": "cluster::action", "type": "workflow"}, {"source": "cluster::action", "target": "node::action::project", "type": "contains"}, {"source": "cluster::action", "target": "node::action::goal", "type": "contains"}, {"source": "cluster::action", "target": "node::action::milestone", "type": "contains"}, {"source": "cluster::action", "target": "node::action::task", "type": "contains"}, {"source": "cluster::action", "target": "node::action::experiment", "type": "contains"}, {"source": "cluster::action", "target": "node::action::sop", "type": "contains"}, {"source": "cluster::action", "target": "node::action::checklist", "type": "contains"}, {"source": "cluster::action", "target": "node::action::review", "type": "contains"}, {"source": "template::brain", "target": "cluster::context", "type": "layer"}, {"source": "cluster::action", "target": "cluster::context", "type": "workflow"}, {"source": "cluster::context", "target": "node::context::person", "type": "contains"}, {"source": "cluster::context", "target": "node::context::organization", "type": "contains"}, {"source": "cluster::context", "target": "node::context::tool", "type": "contains"}, {"source": "cluster::context", "target": "node::context::skill", "type": "contains"}, {"source": "cluster::context", "target": "node::context::prompt", "type": "contains"}, {"source": "cluster::context", "target": "node::context::meeting", "type": "contains"}, {"source": "cluster::context", "target": "node::context::conversation", "type": "contains"}, {"source": "cluster::context", "target": "node::context::account", "type": "contains"}, {"source": "template::brain", "target": "cluster::output", "type": "layer"}, {"source": "cluster::context", "target": "cluster::output", "type": "workflow"}, {"source": "cluster::output", "target": "node::output::dashboard", "type": "contains"}, {"source": "cluster::output", "target": "node::output::index", "type": "contains"}, {"source": "cluster::output", "target": "node::output::newsletter-draft", "type": "contains"}, {"source": "cluster::output", "target": "node::output::article-draft", "type": "contains"}, {"source": "cluster::output", "target": "node::output::video-script", "type": "contains"}, {"source": "cluster::output", "target": "node::output::research-report", "type": "contains"}, {"source": "cluster::output", "target": "node::output::archive", "type": "contains"}, {"source": "node::capture::inbox-capture", "target": "node::source::article-source", "type": "capture-to-source"}, {"source": "node::source::pdf-highlight", "target": "node::distill::atomic-note", "type": "source-to-distill"}, {"source": "node::distill::evergreen-note", "target": "node::concept::mental-model", "type": "distill-to-concept"}, {"source": "node::concept::framework", "target": "node::inquiry::hypothesis", "type": "concept-to-inquiry"}, {"source": "node::inquiry::decision", "target": "node::action::project", "type": "inquiry-to-action"}, {"source": "node::action::review", "target": "node::output::dashboard", "type": "action-to-output"}, {"source": "node::context::person", "target": "node::action::task", "type": "context-to-action"}, {"source": "node::output::research-report", "target": "node::concept::topic-moc", "type": "output-to-map"}]};
+const svg = document.getElementById('graph');
+const detail = document.getElementById('detail');
+const search = document.getElementById('search');
+const enabledGroups = new Set(Object.keys(graph.colors));
+let selected = null;
+let scale = 1;
+let tx = 0;
+let ty = 0;
+let dragging = false;
+let last = null;
+
+document.getElementById('nodeCount').textContent = graph.nodes.length;
+document.getElementById('linkCount').textContent = graph.links.length;
+
+const nodeById = new Map(graph.nodes.map(n => [n.id, n]));
+const linked = new Map();
+for (const link of graph.links) {
+  if (!linked.has(link.source)) linked.set(link.source, new Set());
+  if (!linked.has(link.target)) linked.set(link.target, new Set());
+  linked.get(link.source).add(link.target);
+  linked.get(link.target).add(link.source);
+}
+
+function renderLegend() {
+  const legend = document.getElementById('legend');
+  legend.innerHTML = '';
+  for (const [group, color] of Object.entries(graph.colors)) {
+    const row = document.createElement('label');
+    row.innerHTML = `<input type="checkbox" checked data-group="${group}"><span class="swatch" style="background:${color}"></span>${group}`;
+    row.querySelector('input').addEventListener('change', event => {
+      if (event.target.checked) enabledGroups.add(group); else enabledGroups.delete(group);
+      render();
+    });
+    legend.appendChild(row);
+  }
+}
+
+function transformPoint(x, y) {
+  return [x * scale + tx, y * scale + ty];
+}
+
+function render() {
+  const q = search.value.trim().toLowerCase();
+  const activeSet = selected ? new Set([selected.id, ...(linked.get(selected.id) || [])]) : null;
+  svg.innerHTML = '';
+  const root = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+  svg.appendChild(root);
+
+  for (const link of graph.links) {
+    const source = nodeById.get(link.source);
+    const target = nodeById.get(link.target);
+    if (!source || !target || !enabledGroups.has(source.group) || !enabledGroups.has(target.group)) continue;
+    const [x1, y1] = transformPoint(source.x, source.y);
+    const [x2, y2] = transformPoint(target.x, target.y);
+    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    line.setAttribute('x1', x1); line.setAttribute('y1', y1);
+    line.setAttribute('x2', x2); line.setAttribute('y2', y2);
+    line.setAttribute('class', `edge ${activeSet && activeSet.has(source.id) && activeSet.has(target.id) ? 'active' : activeSet ? 'dim' : ''}`);
+    root.appendChild(line);
+  }
+
+  for (const node of graph.nodes) {
+    if (!enabledGroups.has(node.group)) continue;
+    const matches = !q || node.title.toLowerCase().includes(q) || node.group.toLowerCase().includes(q);
+    if (!matches) continue;
+    const [x, y] = transformPoint(node.x, node.y);
+    const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    const radius = Math.max(4, node.weight * scale);
+    group.setAttribute('class', `node ${node.kind} ${activeSet && !activeSet.has(node.id) ? 'dim' : ''} ${selected && selected.id === node.id ? 'active' : ''}`);
+    group.setAttribute('transform', `translate(${x},${y})`);
+    group.addEventListener('click', event => { event.stopPropagation(); selected = node; showDetail(node); render(); });
+    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    circle.setAttribute('r', radius);
+    circle.setAttribute('fill', graph.colors[node.group] || '#fff');
+    const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    label.setAttribute('x', radius + 5);
+    label.setAttribute('y', 4);
+    label.textContent = node.title;
+    group.appendChild(circle);
+    group.appendChild(label);
+    root.appendChild(group);
+  }
+}
+
+function showDetail(node) {
+  const direct = [...(linked.get(node.id) || [])].map(id => nodeById.get(id)).filter(Boolean);
+  detail.innerHTML = `<h2>${node.group} / ${node.kind}</h2><h1>${node.title}</h1><p>${node.description}</p><h2>Direct Links</h2><div class="links">${direct.map(n => `<button data-node="${n.id}">${n.title}</button>`).join('') || '<p>No direct links.</p>'}</div>`;
+  detail.querySelectorAll('button[data-node]').forEach(button => {
+    button.addEventListener('click', () => {
+      selected = nodeById.get(button.dataset.node);
+      showDetail(selected);
+      render();
+    });
+  });
+}
+
+svg.addEventListener('click', () => { selected = null; detail.textContent = 'Click a node to inspect direct links.'; render(); });
+svg.addEventListener('pointerdown', event => { dragging = true; last = [event.clientX, event.clientY]; svg.classList.add('dragging'); });
+window.addEventListener('pointerup', () => { dragging = false; last = null; svg.classList.remove('dragging'); });
+window.addEventListener('pointermove', event => {
+  if (!dragging || !last) return;
+  const dx = event.clientX - last[0], dy = event.clientY - last[1];
+  tx += dx; ty += dy; last = [event.clientX, event.clientY]; render();
+});
+svg.addEventListener('wheel', event => {
+  event.preventDefault();
+  scale = Math.min(3.5, Math.max(.35, scale * (event.deltaY < 0 ? 1.1 : .9)));
+  render();
+}, { passive:false });
+document.getElementById('zoomIn').onclick = () => { scale = Math.min(3.5, scale * 1.2); render(); };
+document.getElementById('zoomOut').onclick = () => { scale = Math.max(.35, scale / 1.2); render(); };
+document.getElementById('reset').onclick = () => { scale = 1; tx = 0; ty = 0; selected = null; detail.textContent = 'Click a node to inspect direct links.'; render(); };
+search.addEventListener('input', render);
+renderLegend();
+render();
+</script>
+</body>
+</html>

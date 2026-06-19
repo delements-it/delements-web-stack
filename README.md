@@ -57,10 +57,13 @@ openclaw gateway start
 ## 🔧 Setup từng phần
 
 ```bash
-make figma       # Chỉ setup Figma MCP
-make webflow     # Chỉ setup Webflow MCP
-make shopify     # Chỉ setup Shopify MCP + CLI
-make agents      # Chỉ setup BSI agents
+make figma           # Chỉ setup Figma MCP
+make webflow         # Chỉ setup Webflow MCP
+make shopify         # Chỉ setup Shopify MCP + CLI
+make agents          # Chỉ setup BSI agents
+make local-programs  # Copy local programs to $BSI_ROOT
+make auth            # Setup OpenClaw auth profiles
+make plugins         # Setup OpenClaw plugins
 ```
 
 ## 📁 Cấu trúc repo
@@ -86,7 +89,13 @@ delements-web-stack/
 ├── brains/                    # Shared brains (non-sensitive)
 │   ├── figma_admin_bsi/
 │   ├── webflow_admin_bsi/
-│   └── shopify_admin_bsi/
+│   ├── shopify_admin_bsi/
+│   ├── shopify_admin_bsi_source/
+│   └── obsidian_vault/
+├── local_programs/            # Local programs (copied to $BSI_ROOT)
+│   ├── shopify_codex_bridge/
+│   ├── shopify_brain_builder/
+│   └── webflow_codex_bridge/
 ├── figma-mcp-server/          # Figma MCP patches/docs
 ├── env/                       # Environment config
 │   ├── .env.example           # Secrets template
@@ -146,6 +155,16 @@ Repo này **KHÔNG** chứa tokens hay credentials. Tất cả secrets được 
 | `bsi-webflow-executor` | Webflow operations executor |
 | `bsi-shopify-mcp` | Shopify MCP server config & protocol |
 | `bsi-shopify-executor` | Shopify operations executor |
+
+## 📦 Local Programs
+
+3 local programs được copy vào `$BSI_ROOT/local_programs/`:
+
+| Program | Mô tả |
+|---|---|
+| `shopify_codex_bridge` | Shopify execution bridge (primary path) |
+| `shopify_brain_builder` | Brain maintenance và build tool |
+| `webflow_codex_bridge` | Webflow execution bridge |
 
 ## 📖 Documentation
 

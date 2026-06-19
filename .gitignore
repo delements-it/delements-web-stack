@@ -28,3 +28,9 @@ figma-mcp-server/plugin/dist/
 
 # Logs
 *.log
+__pycache__/
+*.pyc
+.state.json
+
+# Local program runtime
+local_programs/*/.state.json

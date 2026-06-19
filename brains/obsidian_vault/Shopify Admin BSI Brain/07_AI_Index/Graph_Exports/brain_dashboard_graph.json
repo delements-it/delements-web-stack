@@ -1,0 +1,621 @@
+{
+  "generated_at": "2026-06-12T14:51:49+07:00",
+  "title": "Shopify Admin Bsi Brain Obsidian Brain",
+  "schema_version": "2026.06.12",
+  "sync_date": "2026-06-12",
+  "department": "Shopify Admin BSI Brain",
+  "vault": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain",
+  "summary": {
+    "directory_records": 16,
+    "sources": 11,
+    "entity_counts": {
+      "mo": 0,
+      "sku": 0,
+      "niche": 0,
+      "stage": 0,
+      "material": 0,
+      "supplier": 0
+    },
+    "groups": {
+      "system": 1,
+      "folder": 1,
+      "source": 11,
+      "domain": 2,
+      "workflow": 1
+    },
+    "production_layer": {
+      "enabled": false,
+      "reason": "no RR Production database package found"
+    }
+  },
+  "nodes": [
+    {
+      "id": "hub::brain",
+      "label": "Shopify Admin Bsi Brain Obsidian Brain",
+      "kind": "hub",
+      "group": "system",
+      "weight": 28,
+      "count": 0,
+      "description": "Department source-data brain built from converted Markdown and Drive directory mapping.",
+      "vault": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "axis::folders",
+      "label": "Folder Context",
+      "kind": "axis",
+      "group": "folder",
+      "weight": 15,
+      "count": 0,
+      "x": 0.0,
+      "y": -245.0
+    },
+    {
+      "id": "axis::domains",
+      "label": "Domains",
+      "kind": "axis",
+      "group": "domain",
+      "weight": 15,
+      "count": 0,
+      "x": 144.007,
+      "y": -198.209
+    },
+    {
+      "id": "axis::workflow",
+      "label": "Workflow Stages",
+      "kind": "axis",
+      "group": "workflow",
+      "weight": 15,
+      "count": 0,
+      "x": 233.009,
+      "y": -75.709
+    },
+    {
+      "id": "axis::sku",
+      "label": "SKUs",
+      "kind": "axis",
+      "group": "sku",
+      "weight": 15,
+      "count": 0,
+      "x": 233.009,
+      "y": 75.709
+    },
+    {
+      "id": "axis::niche",
+      "label": "Products / Niches",
+      "kind": "axis",
+      "group": "niche",
+      "weight": 15,
+      "count": 0,
+      "x": 144.007,
+      "y": 198.209
+    },
+    {
+      "id": "axis::stage",
+      "label": "Product Stages",
+      "kind": "axis",
+      "group": "stage",
+      "weight": 15,
+      "count": 0,
+      "x": 0.0,
+      "y": 245.0
+    },
+    {
+      "id": "axis::material",
+      "label": "Materials",
+      "kind": "axis",
+      "group": "material",
+      "weight": 15,
+      "count": 0,
+      "x": -144.007,
+      "y": 198.209
+    },
+    {
+      "id": "axis::supplier",
+      "label": "Suppliers / Factories",
+      "kind": "axis",
+      "group": "supplier",
+      "weight": 15,
+      "count": 0,
+      "x": -233.009,
+      "y": 75.709
+    },
+    {
+      "id": "axis::mo",
+      "label": "MO / PO / LSX",
+      "kind": "axis",
+      "group": "mo",
+      "weight": 15,
+      "count": 0,
+      "x": -233.009,
+      "y": -75.709
+    },
+    {
+      "id": "axis::source",
+      "label": "Source Files",
+      "kind": "axis",
+      "group": "source",
+      "weight": 15,
+      "count": 0,
+      "x": -144.007,
+      "y": -198.209
+    },
+    {
+      "id": "folder::1a5985d60682e1a1",
+      "label": "Source_Files",
+      "kind": "folder",
+      "group": "folder",
+      "weight": 8.833213344056215,
+      "count": 27,
+      "source_path": "Source_Files",
+      "x": -331.199,
+      "y": -274.239
+    },
+    {
+      "id": "source::8032943af39eca7f",
+      "label": "Shopify Admin BSI Brain Overview.md",
+      "kind": "source",
+      "group": "source",
+      "weight": 2.8,
+      "count": 0,
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/00_Context/Shopify Admin BSI Brain Overview.md",
+      "source_path": "Source_Files > 00_Context/Shopify Admin BSI Brain Overview.md",
+      "source_type": "md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Shopify Admin BSI Brain Overview__2a11c28154ee5bcf.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "modified_time": "2026-06-12T14:29:48+07:00",
+      "x": -463.197,
+      "y": -545.989
+    },
+    {
+      "id": "domain::069343785fa0f16a",
+      "label": "production_management",
+      "kind": "domain",
+      "group": "domain",
+      "weight": 8.0,
+      "count": 10,
+      "x": -163.164,
+      "y": -397.841
+    },
+    {
+      "id": "workflow::80e61027a7c98c34",
+      "label": "planned",
+      "kind": "workflow",
+      "group": "workflow",
+      "weight": 8.0,
+      "count": 11,
+      "x": 213.956,
+      "y": -372.992
+    },
+    {
+      "id": "source::db2e7e2f9a47b4b0",
+      "label": "Brain Owner and Executor Paths.md",
+      "kind": "source",
+      "group": "source",
+      "weight": 2.8,
+      "count": 0,
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Brain Owner and Executor Paths.md",
+      "source_path": "Source_Files > 01_Governance/Brain Owner and Executor Paths.md",
+      "source_type": "md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Brain Owner and Executor Paths__d0c257c2a310c9c4.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "modified_time": "2026-06-12T14:50:43+07:00",
+      "x": -480.733,
+      "y": -542.697
+    },
+    {
+      "id": "source::c21bdb8ef595a1ac",
+      "label": "Execution Chat Contract.md",
+      "kind": "source",
+      "group": "source",
+      "weight": 2.8,
+      "count": 0,
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Execution Chat Contract.md",
+      "source_path": "Source_Files > 01_Governance/Execution Chat Contract.md",
+      "source_type": "md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Execution Chat Contract__b9a048b19ffb7479.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "modified_time": "2026-06-12T14:29:48+07:00",
+      "x": -469.17,
+      "y": -534.229
+    },
+    {
+      "id": "source::13b9ebd80620de7f",
+      "label": "Governance and Ownership.md",
+      "kind": "source",
+      "group": "source",
+      "weight": 2.8,
+      "count": 0,
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Governance and Ownership.md",
+      "source_path": "Source_Files > 01_Governance/Governance and Ownership.md",
+      "source_type": "md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Governance and Ownership__c81af9a2fa78db1d.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "modified_time": "2026-06-12T14:29:48+07:00",
+      "x": -470.164,
+      "y": -540.002
+    },
+    {
+      "id": "source::cca0720acee10597",
+      "label": "Active Store Registry Snapshot.md",
+      "kind": "source",
+      "group": "source",
+      "weight": 2.8,
+      "count": 0,
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Active Store Registry Snapshot.md",
+      "source_path": "Source_Files > 02_Operations/Active Store Registry Snapshot.md",
+      "source_type": "md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Active Store Registry Snapshot__b18d07a7659c9ac0.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "modified_time": "2026-06-12T14:50:43+07:00",
+      "x": -483.716,
+      "y": -541.382
+    },
+    {
+      "id": "source::8b07e32c6dc1a896",
+      "label": "Run Profiles and Safety Gates.md",
+      "kind": "source",
+      "group": "source",
+      "weight": 2.8,
+      "count": 0,
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Run Profiles and Safety Gates.md",
+      "source_path": "Source_Files > 02_Operations/Run Profiles and Safety Gates.md",
+      "source_type": "md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Run Profiles and Safety Gates__bab91ca4bb845a38.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "modified_time": "2026-06-12T14:29:48+07:00",
+      "x": -467.478,
+      "y": -546.283
+    },
+    {
+      "id": "source::216d8c8f0abae5f7",
+      "label": "Shopify MCP and CLI Architecture.md",
+      "kind": "source",
+      "group": "source",
+      "weight": 2.8,
+      "count": 0,
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Shopify MCP and CLI Architecture.md",
+      "source_path": "Source_Files > 02_Operations/Shopify MCP and CLI Architecture.md",
+      "source_type": "md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Shopify MCP and CLI Architecture__366425f4accc600a.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "modified_time": "2026-06-12T14:29:48+07:00",
+      "x": -458.283,
+      "y": -544.904
+    },
+    {
+      "id": "source::57b09e451da70c35",
+      "label": "Store Registry Policy.md",
+      "kind": "source",
+      "group": "source",
+      "weight": 2.8,
+      "count": 0,
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Store Registry Policy.md",
+      "source_path": "Source_Files > 02_Operations/Store Registry Policy.md",
+      "source_type": "md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Store Registry Policy__364ab8e13fba61d8.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "modified_time": "2026-06-12T14:29:48+07:00",
+      "x": -448.904,
+      "y": -538.41
+    },
+    {
+      "id": "source::458a97739c311b92",
+      "label": "Bug Proposal Workflow.md",
+      "kind": "source",
+      "group": "source",
+      "weight": 2.8,
+      "count": 0,
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Bug Proposal Workflow.md",
+      "source_path": "Source_Files > 03_Integrations/Bug Proposal Workflow.md",
+      "source_type": "md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/workflow_project/planned/Bug Proposal Workflow__1bdd754b981b0df1.md",
+      "domain": "workflow_project",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "modified_time": "2026-06-12T14:29:48+07:00",
+      "x": 21.831,
+      "y": -708.664
+    },
+    {
+      "id": "domain::8a1afee5a8754bbc",
+      "label": "workflow_project",
+      "kind": "domain",
+      "group": "domain",
+      "weight": 8,
+      "count": 1,
+      "x": 15.149,
+      "y": -491.767
+    },
+    {
+      "id": "source::b2375ed78fddf549",
+      "label": "Integration Analysis Frame.md",
+      "kind": "source",
+      "group": "source",
+      "weight": 2.8,
+      "count": 0,
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Integration Analysis Frame.md",
+      "source_path": "Source_Files > 03_Integrations/Integration Analysis Frame.md",
+      "source_type": "md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Integration Analysis Frame__fe9f71783f2775e1.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "modified_time": "2026-06-12T14:29:48+07:00",
+      "x": -462.623,
+      "y": -535.952
+    },
+    {
+      "id": "source::23c2ed1debeea21d",
+      "label": "Theme and Live Store Rules.md",
+      "kind": "source",
+      "group": "source",
+      "weight": 2.8,
+      "count": 0,
+      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Theme and Live Store Rules.md",
+      "source_path": "Source_Files > 03_Integrations/Theme and Live Store Rules.md",
+      "source_type": "md",
+      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Theme and Live Store Rules__f0968c262162e194.md",
+      "domain": "production_management",
+      "workflow_stage": "planned",
+      "kanban_status": "ready",
+      "modified_time": "2026-06-12T14:29:48+07:00",
+      "x": -451.057,
+      "y": -545.721
+    }
+  ],
+  "links": [
+    {
+      "source": "axis::domains",
+      "target": "domain::069343785fa0f16a",
+      "kind": "domain"
+    },
+    {
+      "source": "axis::domains",
+      "target": "domain::8a1afee5a8754bbc",
+      "kind": "domain"
+    },
+    {
+      "source": "axis::folders",
+      "target": "folder::1a5985d60682e1a1",
+      "kind": "folder"
+    },
+    {
+      "source": "axis::workflow",
+      "target": "workflow::80e61027a7c98c34",
+      "kind": "workflow"
+    },
+    {
+      "source": "domain::069343785fa0f16a",
+      "target": "source::13b9ebd80620de7f",
+      "kind": "contains"
+    },
+    {
+      "source": "domain::069343785fa0f16a",
+      "target": "source::216d8c8f0abae5f7",
+      "kind": "contains"
+    },
+    {
+      "source": "domain::069343785fa0f16a",
+      "target": "source::23c2ed1debeea21d",
+      "kind": "contains"
+    },
+    {
+      "source": "domain::069343785fa0f16a",
+      "target": "source::57b09e451da70c35",
+      "kind": "contains"
+    },
+    {
+      "source": "domain::069343785fa0f16a",
+      "target": "source::8032943af39eca7f",
+      "kind": "contains"
+    },
+    {
+      "source": "domain::069343785fa0f16a",
+      "target": "source::8b07e32c6dc1a896",
+      "kind": "contains"
+    },
+    {
+      "source": "domain::069343785fa0f16a",
+      "target": "source::b2375ed78fddf549",
+      "kind": "contains"
+    },
+    {
+      "source": "domain::069343785fa0f16a",
+      "target": "source::c21bdb8ef595a1ac",
+      "kind": "contains"
+    },
+    {
+      "source": "domain::069343785fa0f16a",
+      "target": "source::cca0720acee10597",
+      "kind": "contains"
+    },
+    {
+      "source": "domain::069343785fa0f16a",
+      "target": "source::db2e7e2f9a47b4b0",
+      "kind": "contains"
+    },
+    {
+      "source": "domain::8a1afee5a8754bbc",
+      "target": "source::458a97739c311b92",
+      "kind": "contains"
+    },
+    {
+      "source": "folder::1a5985d60682e1a1",
+      "target": "source::13b9ebd80620de7f",
+      "kind": "folder-source"
+    },
+    {
+      "source": "folder::1a5985d60682e1a1",
+      "target": "source::216d8c8f0abae5f7",
+      "kind": "folder-source"
+    },
+    {
+      "source": "folder::1a5985d60682e1a1",
+      "target": "source::23c2ed1debeea21d",
+      "kind": "folder-source"
+    },
+    {
+      "source": "folder::1a5985d60682e1a1",
+      "target": "source::458a97739c311b92",
+      "kind": "folder-source"
+    },
+    {
+      "source": "folder::1a5985d60682e1a1",
+      "target": "source::57b09e451da70c35",
+      "kind": "folder-source"
+    },
+    {
+      "source": "folder::1a5985d60682e1a1",
+      "target": "source::8032943af39eca7f",
+      "kind": "folder-source"
+    },
+    {
+      "source": "folder::1a5985d60682e1a1",
+      "target": "source::8b07e32c6dc1a896",
+      "kind": "folder-source"
+    },
+    {
+      "source": "folder::1a5985d60682e1a1",
+      "target": "source::b2375ed78fddf549",
+      "kind": "folder-source"
+    },
+    {
+      "source": "folder::1a5985d60682e1a1",
+      "target": "source::c21bdb8ef595a1ac",
+      "kind": "folder-source"
+    },
+    {
+      "source": "folder::1a5985d60682e1a1",
+      "target": "source::cca0720acee10597",
+      "kind": "folder-source"
+    },
+    {
+      "source": "folder::1a5985d60682e1a1",
+      "target": "source::db2e7e2f9a47b4b0",
+      "kind": "folder-source"
+    },
+    {
+      "source": "hub::brain",
+      "target": "axis::domains",
+      "kind": "axis"
+    },
+    {
+      "source": "hub::brain",
+      "target": "axis::folders",
+      "kind": "axis"
+    },
+    {
+      "source": "hub::brain",
+      "target": "axis::material",
+      "kind": "axis"
+    },
+    {
+      "source": "hub::brain",
+      "target": "axis::mo",
+      "kind": "axis"
+    },
+    {
+      "source": "hub::brain",
+      "target": "axis::niche",
+      "kind": "axis"
+    },
+    {
+      "source": "hub::brain",
+      "target": "axis::sku",
+      "kind": "axis"
+    },
+    {
+      "source": "hub::brain",
+      "target": "axis::source",
+      "kind": "axis"
+    },
+    {
+      "source": "hub::brain",
+      "target": "axis::stage",
+      "kind": "axis"
+    },
+    {
+      "source": "hub::brain",
+      "target": "axis::supplier",
+      "kind": "axis"
+    },
+    {
+      "source": "hub::brain",
+      "target": "axis::workflow",
+      "kind": "axis"
+    },
+    {
+      "source": "workflow::80e61027a7c98c34",
+      "target": "source::13b9ebd80620de7f",
+      "kind": "stage"
+    },
+    {
+      "source": "workflow::80e61027a7c98c34",
+      "target": "source::216d8c8f0abae5f7",
+      "kind": "stage"
+    },
+    {
+      "source": "workflow::80e61027a7c98c34",
+      "target": "source::23c2ed1debeea21d",
+      "kind": "stage"
+    },
+    {
+      "source": "workflow::80e61027a7c98c34",
+      "target": "source::458a97739c311b92",
+      "kind": "stage"
+    },
+    {
+      "source": "workflow::80e61027a7c98c34",
+      "target": "source::57b09e451da70c35",
+      "kind": "stage"
+    },
+    {
+      "source": "workflow::80e61027a7c98c34",
+      "target": "source::8032943af39eca7f",
+      "kind": "stage"
+    },
+    {
+      "source": "workflow::80e61027a7c98c34",
+      "target": "source::8b07e32c6dc1a896",
+      "kind": "stage"
+    },
+    {
+      "source": "workflow::80e61027a7c98c34",
+      "target": "source::b2375ed78fddf549",
+      "kind": "stage"
+    },
+    {
+      "source": "workflow::80e61027a7c98c34",
+      "target": "source::c21bdb8ef595a1ac",
+      "kind": "stage"
+    },
+    {
+      "source": "workflow::80e61027a7c98c34",
+      "target": "source::cca0720acee10597",
+      "kind": "stage"
+    },
+    {
+      "source": "workflow::80e61027a7c98c34",
+      "target": "source::db2e7e2f9a47b4b0",
+      "kind": "stage"
+    }
+  ]
+}

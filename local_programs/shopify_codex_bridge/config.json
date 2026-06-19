@@ -1,0 +1,56 @@
+{
+  "codex_bin": "codex",
+  "mcp_server_name": "shopify-dev-mcp",
+  "chrome_app": "Google Chrome",
+  "chrome_profile_directory": "Profile 3",
+  "chrome_profile_label": "IT Helpdesk",
+  "chrome_profile_email": "it.helpdesk@delements.co",
+  "browser_launcher": "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge/chrome_profile_browser.sh",
+  "shopify_admin_url": "https://admin.shopify.com",
+  "default_store": "",
+  "store_registry_file": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/STORE_REGISTRY.json",
+  "brain_owner_bootstrap_file": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/BRAIN_OWNER_BOOTSTRAP.md",
+  "brain_owner_prompt_file": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/SHOPIFY_BRAIN_OWNER_CHAT_PROMPT.md",
+  "executor_bootstrap_file": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/EXECUTOR_BOOTSTRAP.md",
+  "executor_prompt_file": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/SHOPIFY_EXECUTOR_CHAT_PROMPT.md",
+  "default_scopes": "read_products,read_inventory",
+  "default_workdir": "/Users/delements/Documents/Business Systems Integration",
+  "brain_root": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi",
+  "brain_files": [
+    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/BRAIN.md",
+    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/RULES.md",
+    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/PLAYBOOKS.md",
+    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/STORE_REGISTRY.json",
+    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/RUN_PROFILES.json"
+  ],
+  "brain_runtime_files": [
+    "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/00_System/Brain Builder Manifest.json",
+    "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/00_System/Brain Charter.md",
+    "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/04_Data_Graph/Brain Data Map.md",
+    "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/retrieval_manifest.json",
+    "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/brain_dashboard_graph.json"
+  ],
+  "proposal_dir": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/proposals",
+  "protected_paths": [
+    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi",
+    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source",
+    "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain"
+  ],
+  "shared_context_files": [
+    "/Users/delements/Documents/Business Systems Integration/AGENTS.md",
+    "/Users/delements/Documents/Business Systems Integration/PROJECT_CONTEXT.md"
+  ],
+  "default_model": "gpt-5.4",
+  "default_sandbox": "danger-full-access",
+  "prompt_preamble": [
+    "This run is the shared Shopify MCP execution path for Admin BSI.",
+    "Use Codex for thinking and task handling.",
+    "Use Shopify Dev MCP when callable in this run.",
+    "Use Shopify CLI for live store operations only when the target store and auth are explicit.",
+    "Prefer read-only live checks before any mutation.",
+    "Treat the shared Shopify brain as read-only; do not edit it from execution chats.",
+    "If the system needs improvement or a rule appears wrong, create a proposal file instead of editing the brain.",
+    "Use the Business Systems Integration governance context as the approval authority for in-scope Shopify integration work.",
+    "If Shopify live auth is unavailable, say so clearly instead of inventing store actions."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-06-12T14:51:49+07:00",
+  "tools": {
+    "markitdown": {
+      "available": false,
+      "path": null
+    },
+    "tesseract": {
+      "available": true,
+      "path": "/opt/homebrew/bin/tesseract"
+    },
+    "soffice": {
+      "available": true,
+      "path": "/opt/homebrew/bin/soffice"
+    },
+    "mineru": {
+      "available": false,
+      "path": null
+    },
+    "agentmemory": {
+      "available": false,
+      "path": null
+    },
+    "node": {
+      "available": true,
+      "path": "/opt/homebrew/bin/node"
+    },
+    "codex": {
+      "available": true,
+      "path": "/opt/homebrew/bin/codex"
+    },
+    "libreoffice_app": {
+      "available": true,
+      "path": "/Applications/LibreOffice.app/Contents/MacOS/soffice"
+    }
+  }
+}

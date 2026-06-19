@@ -1,0 +1,101 @@
+[
+  {
+    "input": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/00_Context/Shopify Admin BSI Brain Overview.md",
+    "source": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/00_Context/Shopify Admin BSI Brain Overview.md",
+    "output_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Shopify-Admin-BSI-Brain-Overview__2a11c28154ee5bcf.md",
+    "relative_output_path": "full/2026-06-12/Shopify-Admin-BSI-Brain-Overview__2a11c28154ee5bcf.md",
+    "backend": "file2md",
+    "status": "converted",
+    "error": null
+  },
+  {
+    "input": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Brain Owner and Executor Paths.md",
+    "source": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Brain Owner and Executor Paths.md",
+    "output_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Brain-Owner-and-Executor-Paths__d0c257c2a310c9c4.md",
+    "relative_output_path": "full/2026-06-12/Brain-Owner-and-Executor-Paths__d0c257c2a310c9c4.md",
+    "backend": "file2md",
+    "status": "converted",
+    "error": null
+  },
+  {
+    "input": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Execution Chat Contract.md",
+    "source": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Execution Chat Contract.md",
+    "output_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Execution-Chat-Contract__b9a048b19ffb7479.md",
+    "relative_output_path": "full/2026-06-12/Execution-Chat-Contract__b9a048b19ffb7479.md",
+    "backend": "file2md",
+    "status": "converted",
+    "error": null
+  },
+  {
+    "input": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Governance and Ownership.md",
+    "source": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Governance and Ownership.md",
+    "output_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Governance-and-Ownership__c81af9a2fa78db1d.md",
+    "relative_output_path": "full/2026-06-12/Governance-and-Ownership__c81af9a2fa78db1d.md",
+    "backend": "file2md",
+    "status": "converted",
+    "error": null
+  },
+  {
+    "input": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Active Store Registry Snapshot.md",
+    "source": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Active Store Registry Snapshot.md",
+    "output_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Active-Store-Registry-Snapshot__b18d07a7659c9ac0.md",
+    "relative_output_path": "full/2026-06-12/Active-Store-Registry-Snapshot__b18d07a7659c9ac0.md",
+    "backend": "file2md",
+    "status": "converted",
+    "error": null
+  },
+  {
+    "input": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Run Profiles and Safety Gates.md",
+    "source": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Run Profiles and Safety Gates.md",
+    "output_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Run-Profiles-and-Safety-Gates__bab91ca4bb845a38.md",
+    "relative_output_path": "full/2026-06-12/Run-Profiles-and-Safety-Gates__bab91ca4bb845a38.md",
+    "backend": "file2md",
+    "status": "converted",
+    "error": null
+  },
+  {
+    "input": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Shopify MCP and CLI Architecture.md",
+    "source": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Shopify MCP and CLI Architecture.md",
+    "output_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Shopify-MCP-and-CLI-Architecture__366425f4accc600a.md",
+    "relative_output_path": "full/2026-06-12/Shopify-MCP-and-CLI-Architecture__366425f4accc600a.md",
+    "backend": "file2md",
+    "status": "converted",
+    "error": null
+  },
+  {
+    "input": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Store Registry Policy.md",
+    "source": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Store Registry Policy.md",
+    "output_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Store-Registry-Policy__364ab8e13fba61d8.md",
+    "relative_output_path": "full/2026-06-12/Store-Registry-Policy__364ab8e13fba61d8.md",
+    "backend": "file2md",
+    "status": "converted",
+    "error": null
+  },
+  {
+    "input": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Bug Proposal Workflow.md",
+    "source": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Bug Proposal Workflow.md",
+    "output_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Bug-Proposal-Workflow__1bdd754b981b0df1.md",
+    "relative_output_path": "full/2026-06-12/Bug-Proposal-Workflow__1bdd754b981b0df1.md",
+    "backend": "file2md",
+    "status": "converted",
+    "error": null
+  },
+  {
+    "input": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Integration Analysis Frame.md",
+    "source": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Integration Analysis Frame.md",
+    "output_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Integration-Analysis-Frame__fe9f71783f2775e1.md",
+    "relative_output_path": "full/2026-06-12/Integration-Analysis-Frame__fe9f71783f2775e1.md",
+    "backend": "file2md",
+    "status": "converted",
+    "error": null
+  },
+  {
+    "input": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Theme and Live Store Rules.md",
+    "source": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Theme and Live Store Rules.md",
+    "output_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Theme-and-Live-Store-Rules__f0968c262162e194.md",
+    "relative_output_path": "full/2026-06-12/Theme-and-Live-Store-Rules__f0968c262162e194.md",
+    "backend": "file2md",
+    "status": "converted",
+    "error": null
+  }
+]

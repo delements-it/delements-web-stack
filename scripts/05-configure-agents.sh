@@ -146,8 +146,11 @@ copy_template() {
 }
 
 copy_template "bsi-figma-mcp" "bsi-figma-mcp"
+copy_template "bsi-figma-executor" "bsi-figma-executor"
 copy_template "bsi-webflow-mcp" "bsi-webflow-mcp"
+copy_template "bsi-webflow-executor" "bsi-webflow-executor"
 copy_template "bsi-shopify-mcp" "bsi-shopify-mcp"
+copy_template "bsi-shopify-executor" "bsi-shopify-executor"
 
 echo ""
 echo -e "${GREEN}[OK] BSI agents configured.${NC}"

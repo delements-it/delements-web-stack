@@ -1,0 +1,7 @@
+{
+  "schema": "rrf.connector.sku_inventory.v1",
+  "sku_count": 0,
+  "row_count": 0,
+  "unique_row_count": 0,
+  "by_sku": {}
+}

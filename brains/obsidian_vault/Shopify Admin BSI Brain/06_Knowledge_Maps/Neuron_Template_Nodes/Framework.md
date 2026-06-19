@@ -1,0 +1,22 @@
+---
+id: "node::concept::framework"
+kind: "template"
+group: "concept"
+tags: [neuron-template, obsidian-brain]
+---
+
+# Framework
+
+Framework template in the concept layer. Fill it with real knowledge, then link it to adjacent nodes.
+
+## Outgoing Links
+
+- [[Hypothesis]]
+
+## Incoming Links
+
+- [[Concept Layer]]
+
+## Notes
+
+- Replace this template text with real knowledge when this node becomes active.
