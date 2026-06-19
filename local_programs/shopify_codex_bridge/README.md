@@ -25,61 +25,61 @@ Local program nay nhan prompt Shopify, mo Shopify bang Chrome profile `IT Helpde
 Kiem tra trang thai:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge/cli.py" status
+python3 "$BSI_ROOT/local_programs/shopify_codex_bridge/cli.py" status
 ```
 
 Mo Shopify Admin voi profile `IT Helpdesk`:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge/cli.py" admin
+python3 "$BSI_ROOT/local_programs/shopify_codex_bridge/cli.py" admin
 ```
 
 Mo Shopify Admin cua mot store cu the:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge/cli.py" admin --store your-store.myshopify.com
+python3 "$BSI_ROOT/local_programs/shopify_codex_bridge/cli.py" admin --store your-store.myshopify.com
 ```
 
 Auth store that bang session browser `IT Helpdesk`:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge/cli.py" store-auth --store your-store.myshopify.com
+python3 "$BSI_ROOT/local_programs/shopify_codex_bridge/cli.py" store-auth --store your-store.myshopify.com
 ```
 
 Test live read:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge/cli.py" store-test --store your-store.myshopify.com
+python3 "$BSI_ROOT/local_programs/shopify_codex_bridge/cli.py" store-test --store your-store.myshopify.com
 ```
 
 Chay query truc tiep:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge/cli.py" store-execute --store your-store.myshopify.com --query "query { shop { name myshopifyDomain } }"
+python3 "$BSI_ROOT/local_programs/shopify_codex_bridge/cli.py" store-execute --store your-store.myshopify.com --query "query { shop { name myshopifyDomain } }"
 ```
 
 Gui task Shopify cho Codex:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge/cli.py" run "Kiem tra scope tich hop Shopify cho sync inventory sang WMS." --store your-store.myshopify.com
+python3 "$BSI_ROOT/local_programs/shopify_codex_bridge/cli.py" run "Kiem tra scope tich hop Shopify cho sync inventory sang WMS." --store your-store.myshopify.com
 ```
 
 Tao bug proposal ma khong sua brain:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge/cli.py" proposal --kind bug --title "Missing run profile" --summary "Can bo sung profile rieng cho liquid read-only checks."
+python3 "$BSI_ROOT/local_programs/shopify_codex_bridge/cli.py" proposal --kind bug --title "Missing run profile" --summary "Can bo sung profile rieng cho liquid read-only checks."
 ```
 
 Xem truoc prompt/command ma khong chay:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge/cli.py" run "List nhung luong live can auth truoc." --dry-run
+python3 "$BSI_ROOT/local_programs/shopify_codex_bridge/cli.py" run "List nhung luong live can auth truoc." --dry-run
 ```
 
 Hoac dung launcher:
 
 ```bash
-"/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge/shopify-codex" status
+"$BSI_ROOT/local_programs/shopify_codex_bridge/shopify-codex" status
 ```
 
 ## Ghi chu van hanh

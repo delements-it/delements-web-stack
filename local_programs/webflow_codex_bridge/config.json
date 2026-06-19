@@ -6,10 +6,10 @@
   "chrome_profile_label": "IT Helpdesk",
   "chrome_profile_email": "it.helpdesk@delements.co",
   "webflow_dashboard_url": "https://webflow.com/dashboard",
-  "default_workdir": "/Users/delements/Documents/Business Systems Integration",
+  "default_workdir": "$BSI_ROOT",
   "shared_context_files": [
-    "/Users/delements/Documents/Business Systems Integration/AGENTS.md",
-    "/Users/delements/Documents/Business Systems Integration/PROJECT_CONTEXT.md"
+    "$BSI_ROOT/AGENTS.md",
+    "$BSI_ROOT/PROJECT_CONTEXT.md"
   ],
   "default_model": "gpt-5.4",
   "default_sandbox": "danger-full-access",

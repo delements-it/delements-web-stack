@@ -1,6 +1,6 @@
 ---
 id: "gdrive_fe9f71783f2775e1"
-source_url: "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Integration Analysis Frame.md"
+source_url: "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Integration Analysis Frame.md"
 source_path: "Source_Files > 03_Integrations/Integration Analysis Frame.md"
 source_type: "md"
 department: "Shopify Admin BSI Brain"
@@ -23,7 +23,7 @@ tags: ["dept/source-data", "domain/production_management", "stage/planned", "sta
 - Domain: `production_management`
 - Kanban status: `ready`
 - Source path: `Source_Files > 03_Integrations/Integration Analysis Frame.md`
-- Google source: /Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Integration Analysis Frame.md
+- Google source: $BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Integration Analysis Frame.md
 
 ---
 

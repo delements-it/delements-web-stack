@@ -20,31 +20,31 @@ Local program nay gom cau hinh dung chung cho `Webflow MCP`, Chrome profile `IT 
 Kiem tra trang thai:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/webflow_codex_bridge/cli.py" status
+python3 "$BSI_ROOT/local_programs/webflow_codex_bridge/cli.py" status
 ```
 
 Mo dashboard Webflow bang profile `IT Helpdesk`:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/webflow_codex_bridge/cli.py" dashboard
+python3 "$BSI_ROOT/local_programs/webflow_codex_bridge/cli.py" dashboard
 ```
 
 Bat dau auth Webflow MCP:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/webflow_codex_bridge/cli.py" auth
+python3 "$BSI_ROOT/local_programs/webflow_codex_bridge/cli.py" auth
 ```
 
 Gui task Webflow cho Codex:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/webflow_codex_bridge/cli.py" run "List my Webflow sites and summarize which ones look relevant to Admin BSI."
+python3 "$BSI_ROOT/local_programs/webflow_codex_bridge/cli.py" run "List my Webflow sites and summarize which ones look relevant to Admin BSI."
 ```
 
 Hoac dung launcher:
 
 ```bash
-"/Users/delements/Documents/Business Systems Integration/local_programs/webflow_codex_bridge/webflow-codex" status
+"$BSI_ROOT/local_programs/webflow_codex_bridge/webflow-codex" status
 ```
 
 ## Ghi chu van hanh
@@ -52,5 +52,5 @@ Hoac dung launcher:
 - Program nay khong tu y gia lap thao tac Webflow. No dua vao `Codex` de thinking va dua vao `Webflow MCP` neu tool da callable trong run do.
 - Neu Webflow MCP chua auth xong, hay chay `auth` truoc.
 - Shared context hien tai doc:
-  - `/Users/delements/Documents/Business Systems Integration/AGENTS.md`
-  - `/Users/delements/Documents/Business Systems Integration/PROJECT_CONTEXT.md`
+  - `$BSI_ROOT/AGENTS.md`
+  - `$BSI_ROOT/PROJECT_CONTEXT.md`

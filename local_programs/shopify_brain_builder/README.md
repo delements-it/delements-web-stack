@@ -14,25 +14,25 @@ Pipeline nay chuan hoa source corpus Shopify trong `Business Systems Integration
 Sinh manifest:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_brain_builder/pipeline.py" --brain-owner generate
+python3 "$BSI_ROOT/local_programs/shopify_brain_builder/pipeline.py" --brain-owner generate
 ```
 
 Build fresh vault:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_brain_builder/pipeline.py" --brain-owner build --fresh
+python3 "$BSI_ROOT/local_programs/shopify_brain_builder/pipeline.py" --brain-owner build --fresh
 ```
 
 Generate + build + export:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_brain_builder/pipeline.py" --brain-owner all --fresh
+python3 "$BSI_ROOT/local_programs/shopify_brain_builder/pipeline.py" --brain-owner all --fresh
 ```
 
 Kiem tra builder status:
 
 ```bash
-python3 "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_brain_builder/pipeline.py" status
+python3 "$BSI_ROOT/local_programs/shopify_brain_builder/pipeline.py" status
 ```
 
 ## Rule

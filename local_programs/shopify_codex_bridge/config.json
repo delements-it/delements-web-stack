@@ -5,40 +5,40 @@
   "chrome_profile_directory": "Profile 3",
   "chrome_profile_label": "IT Helpdesk",
   "chrome_profile_email": "it.helpdesk@delements.co",
-  "browser_launcher": "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge/chrome_profile_browser.sh",
+  "browser_launcher": "$BSI_ROOT/local_programs/shopify_codex_bridge/chrome_profile_browser.sh",
   "shopify_admin_url": "https://admin.shopify.com",
   "default_store": "",
-  "store_registry_file": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/STORE_REGISTRY.json",
-  "brain_owner_bootstrap_file": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/BRAIN_OWNER_BOOTSTRAP.md",
-  "brain_owner_prompt_file": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/SHOPIFY_BRAIN_OWNER_CHAT_PROMPT.md",
-  "executor_bootstrap_file": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/EXECUTOR_BOOTSTRAP.md",
-  "executor_prompt_file": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/SHOPIFY_EXECUTOR_CHAT_PROMPT.md",
+  "store_registry_file": "$BSI_ROOT/shared_brains/shopify_admin_bsi/STORE_REGISTRY.json",
+  "brain_owner_bootstrap_file": "$BSI_ROOT/shared_brains/shopify_admin_bsi/BRAIN_OWNER_BOOTSTRAP.md",
+  "brain_owner_prompt_file": "$BSI_ROOT/shared_brains/shopify_admin_bsi/SHOPIFY_BRAIN_OWNER_CHAT_PROMPT.md",
+  "executor_bootstrap_file": "$BSI_ROOT/shared_brains/shopify_admin_bsi/EXECUTOR_BOOTSTRAP.md",
+  "executor_prompt_file": "$BSI_ROOT/shared_brains/shopify_admin_bsi/SHOPIFY_EXECUTOR_CHAT_PROMPT.md",
   "default_scopes": "read_products,read_inventory",
-  "default_workdir": "/Users/delements/Documents/Business Systems Integration",
-  "brain_root": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi",
+  "default_workdir": "$BSI_ROOT",
+  "brain_root": "$BSI_ROOT/shared_brains/shopify_admin_bsi",
   "brain_files": [
-    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/BRAIN.md",
-    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/RULES.md",
-    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/PLAYBOOKS.md",
-    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/STORE_REGISTRY.json",
-    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/RUN_PROFILES.json"
+    "$BSI_ROOT/shared_brains/shopify_admin_bsi/BRAIN.md",
+    "$BSI_ROOT/shared_brains/shopify_admin_bsi/RULES.md",
+    "$BSI_ROOT/shared_brains/shopify_admin_bsi/PLAYBOOKS.md",
+    "$BSI_ROOT/shared_brains/shopify_admin_bsi/STORE_REGISTRY.json",
+    "$BSI_ROOT/shared_brains/shopify_admin_bsi/RUN_PROFILES.json"
   ],
   "brain_runtime_files": [
-    "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/00_System/Brain Builder Manifest.json",
-    "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/00_System/Brain Charter.md",
-    "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/04_Data_Graph/Brain Data Map.md",
-    "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/retrieval_manifest.json",
-    "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/brain_dashboard_graph.json"
+    "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/00_System/Brain Builder Manifest.json",
+    "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/00_System/Brain Charter.md",
+    "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/04_Data_Graph/Brain Data Map.md",
+    "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/retrieval_manifest.json",
+    "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/brain_dashboard_graph.json"
   ],
-  "proposal_dir": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/proposals",
+  "proposal_dir": "$BSI_ROOT/shared_brains/shopify_admin_bsi/proposals",
   "protected_paths": [
-    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi",
-    "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source",
-    "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain"
+    "$BSI_ROOT/shared_brains/shopify_admin_bsi",
+    "$BSI_ROOT/shared_brains/shopify_admin_bsi_source",
+    "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain"
   ],
   "shared_context_files": [
-    "/Users/delements/Documents/Business Systems Integration/AGENTS.md",
-    "/Users/delements/Documents/Business Systems Integration/PROJECT_CONTEXT.md"
+    "$BSI_ROOT/AGENTS.md",
+    "$BSI_ROOT/PROJECT_CONTEXT.md"
   ],
   "default_model": "gpt-5.4",
   "default_sandbox": "danger-full-access",

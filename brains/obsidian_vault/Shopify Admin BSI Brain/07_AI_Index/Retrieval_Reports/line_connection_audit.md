@@ -6,7 +6,7 @@ This index stores direct line-level edges from markdown source notes to business
 
 ## Outputs
 
-- SQLite DB: `/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/line_connections.sqlite`
+- SQLite DB: `$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/line_connections.sqlite`
 
 ## Counts
 

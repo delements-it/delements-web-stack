@@ -1,5 +1,5 @@
 {
-  "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain",
+  "vault_path": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain",
   "schema_version": "2026.06.12",
   "sync_date": "2026-06-12",
   "generated_at": "2026-06-12T14:51:49+07:00",
@@ -17,33 +17,33 @@
     "qc_indexes": 1,
     "supplier_indexes": 1
   },
-  "directory_catalog": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/directory_catalog.json",
+  "directory_catalog": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/directory_catalog.json",
   "graph_exports": {
     "generated_at": "2026-06-12T14:51:49+07:00",
-    "vault": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain",
-    "graph_data": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/brain_dashboard_graph.json",
-    "dashboard_html": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/04_Data_Graph/Brain Dashboard.html",
-    "dashboard_preview": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/dashboard_preview.html",
-    "agentmemory_seed": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/agentmemory_seed.jsonl",
-    "arkon_sources_manifest": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/arkon_sources_manifest.json",
-    "optional_tools_status": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/optional_tools_status.json",
+    "vault": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain",
+    "graph_data": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/brain_dashboard_graph.json",
+    "dashboard_html": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/04_Data_Graph/Brain Dashboard.html",
+    "dashboard_preview": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/dashboard_preview.html",
+    "agentmemory_seed": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/agentmemory_seed.jsonl",
+    "arkon_sources_manifest": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/arkon_sources_manifest.json",
+    "optional_tools_status": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/optional_tools_status.json",
     "source_count": 11,
     "node_count": 26,
     "link_count": 47
   },
   "connector_retrieval": {
-    "connector_retrieval_index": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/connector_retrieval_index.jsonl",
-    "sku_inventory_index": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/sku_inventory_index.json",
-    "sku_fast_lookup": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/sku_fast_lookup.json",
-    "connector_retrieval_audit": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Retrieval_Reports/connector_retrieval_audit.md",
+    "connector_retrieval_index": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/connector_retrieval_index.jsonl",
+    "sku_inventory_index": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/sku_inventory_index.json",
+    "sku_fast_lookup": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/sku_fast_lookup.json",
+    "connector_retrieval_audit": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Retrieval_Reports/connector_retrieval_audit.md",
     "connector_records": 11,
     "sku_rows": 0,
     "sku_unique_rows": 0,
     "sku_codes": 0
   },
   "line_connections": {
-    "line_connection_db": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/line_connections.sqlite",
-    "line_connection_audit": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Retrieval_Reports/line_connection_audit.md",
+    "line_connection_db": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/line_connections.sqlite",
+    "line_connection_audit": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Retrieval_Reports/line_connection_audit.md",
     "sources_indexed": 11,
     "connections": 373
   },
@@ -51,7 +51,7 @@
     {
       "id": "gdrive_2a11c28154ee5bcf",
       "name": "Shopify Admin BSI Brain Overview.md",
-      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/00_Context/Shopify Admin BSI Brain Overview.md",
+      "source_url": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/00_Context/Shopify Admin BSI Brain Overview.md",
       "source_path": "Source_Files > 00_Context/Shopify Admin BSI Brain Overview.md",
       "source_type": "md",
       "department": "Shopify Admin BSI Brain",
@@ -73,13 +73,13 @@
         "stage/planned",
         "status/ready"
       ],
-      "converted_md_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Shopify-Admin-BSI-Brain-Overview__2a11c28154ee5bcf.md",
-      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Shopify Admin BSI Brain Overview__2a11c28154ee5bcf.md"
+      "converted_md_path": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Shopify-Admin-BSI-Brain-Overview__2a11c28154ee5bcf.md",
+      "vault_path": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Shopify Admin BSI Brain Overview__2a11c28154ee5bcf.md"
     },
     {
       "id": "gdrive_d0c257c2a310c9c4",
       "name": "Brain Owner and Executor Paths.md",
-      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Brain Owner and Executor Paths.md",
+      "source_url": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Brain Owner and Executor Paths.md",
       "source_path": "Source_Files > 01_Governance/Brain Owner and Executor Paths.md",
       "source_type": "md",
       "department": "Shopify Admin BSI Brain",
@@ -101,13 +101,13 @@
         "stage/planned",
         "status/ready"
       ],
-      "converted_md_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Brain-Owner-and-Executor-Paths__d0c257c2a310c9c4.md",
-      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Brain Owner and Executor Paths__d0c257c2a310c9c4.md"
+      "converted_md_path": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Brain-Owner-and-Executor-Paths__d0c257c2a310c9c4.md",
+      "vault_path": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Brain Owner and Executor Paths__d0c257c2a310c9c4.md"
     },
     {
       "id": "gdrive_b9a048b19ffb7479",
       "name": "Execution Chat Contract.md",
-      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Execution Chat Contract.md",
+      "source_url": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Execution Chat Contract.md",
       "source_path": "Source_Files > 01_Governance/Execution Chat Contract.md",
       "source_type": "md",
       "department": "Shopify Admin BSI Brain",
@@ -129,13 +129,13 @@
         "stage/planned",
         "status/ready"
       ],
-      "converted_md_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Execution-Chat-Contract__b9a048b19ffb7479.md",
-      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Execution Chat Contract__b9a048b19ffb7479.md"
+      "converted_md_path": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Execution-Chat-Contract__b9a048b19ffb7479.md",
+      "vault_path": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Execution Chat Contract__b9a048b19ffb7479.md"
     },
     {
       "id": "gdrive_c81af9a2fa78db1d",
       "name": "Governance and Ownership.md",
-      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Governance and Ownership.md",
+      "source_url": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/01_Governance/Governance and Ownership.md",
       "source_path": "Source_Files > 01_Governance/Governance and Ownership.md",
       "source_type": "md",
       "department": "Shopify Admin BSI Brain",
@@ -157,13 +157,13 @@
         "stage/planned",
         "status/ready"
       ],
-      "converted_md_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Governance-and-Ownership__c81af9a2fa78db1d.md",
-      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Governance and Ownership__c81af9a2fa78db1d.md"
+      "converted_md_path": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Governance-and-Ownership__c81af9a2fa78db1d.md",
+      "vault_path": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Governance and Ownership__c81af9a2fa78db1d.md"
     },
     {
       "id": "gdrive_b18d07a7659c9ac0",
       "name": "Active Store Registry Snapshot.md",
-      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Active Store Registry Snapshot.md",
+      "source_url": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Active Store Registry Snapshot.md",
       "source_path": "Source_Files > 02_Operations/Active Store Registry Snapshot.md",
       "source_type": "md",
       "department": "Shopify Admin BSI Brain",
@@ -185,13 +185,13 @@
         "stage/planned",
         "status/ready"
       ],
-      "converted_md_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Active-Store-Registry-Snapshot__b18d07a7659c9ac0.md",
-      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Active Store Registry Snapshot__b18d07a7659c9ac0.md"
+      "converted_md_path": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Active-Store-Registry-Snapshot__b18d07a7659c9ac0.md",
+      "vault_path": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Active Store Registry Snapshot__b18d07a7659c9ac0.md"
     },
     {
       "id": "gdrive_bab91ca4bb845a38",
       "name": "Run Profiles and Safety Gates.md",
-      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Run Profiles and Safety Gates.md",
+      "source_url": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Run Profiles and Safety Gates.md",
       "source_path": "Source_Files > 02_Operations/Run Profiles and Safety Gates.md",
       "source_type": "md",
       "department": "Shopify Admin BSI Brain",
@@ -213,13 +213,13 @@
         "stage/planned",
         "status/ready"
       ],
-      "converted_md_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Run-Profiles-and-Safety-Gates__bab91ca4bb845a38.md",
-      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Run Profiles and Safety Gates__bab91ca4bb845a38.md"
+      "converted_md_path": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Run-Profiles-and-Safety-Gates__bab91ca4bb845a38.md",
+      "vault_path": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Run Profiles and Safety Gates__bab91ca4bb845a38.md"
     },
     {
       "id": "gdrive_366425f4accc600a",
       "name": "Shopify MCP and CLI Architecture.md",
-      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Shopify MCP and CLI Architecture.md",
+      "source_url": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Shopify MCP and CLI Architecture.md",
       "source_path": "Source_Files > 02_Operations/Shopify MCP and CLI Architecture.md",
       "source_type": "md",
       "department": "Shopify Admin BSI Brain",
@@ -241,13 +241,13 @@
         "stage/planned",
         "status/ready"
       ],
-      "converted_md_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Shopify-MCP-and-CLI-Architecture__366425f4accc600a.md",
-      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Shopify MCP and CLI Architecture__366425f4accc600a.md"
+      "converted_md_path": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Shopify-MCP-and-CLI-Architecture__366425f4accc600a.md",
+      "vault_path": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Shopify MCP and CLI Architecture__366425f4accc600a.md"
     },
     {
       "id": "gdrive_364ab8e13fba61d8",
       "name": "Store Registry Policy.md",
-      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Store Registry Policy.md",
+      "source_url": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/02_Operations/Store Registry Policy.md",
       "source_path": "Source_Files > 02_Operations/Store Registry Policy.md",
       "source_type": "md",
       "department": "Shopify Admin BSI Brain",
@@ -269,13 +269,13 @@
         "stage/planned",
         "status/ready"
       ],
-      "converted_md_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Store-Registry-Policy__364ab8e13fba61d8.md",
-      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Store Registry Policy__364ab8e13fba61d8.md"
+      "converted_md_path": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Store-Registry-Policy__364ab8e13fba61d8.md",
+      "vault_path": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Store Registry Policy__364ab8e13fba61d8.md"
     },
     {
       "id": "gdrive_1bdd754b981b0df1",
       "name": "Bug Proposal Workflow.md",
-      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Bug Proposal Workflow.md",
+      "source_url": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Bug Proposal Workflow.md",
       "source_path": "Source_Files > 03_Integrations/Bug Proposal Workflow.md",
       "source_type": "md",
       "department": "Shopify Admin BSI Brain",
@@ -297,13 +297,13 @@
         "stage/planned",
         "status/ready"
       ],
-      "converted_md_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Bug-Proposal-Workflow__1bdd754b981b0df1.md",
-      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/workflow_project/planned/Bug Proposal Workflow__1bdd754b981b0df1.md"
+      "converted_md_path": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Bug-Proposal-Workflow__1bdd754b981b0df1.md",
+      "vault_path": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/workflow_project/planned/Bug Proposal Workflow__1bdd754b981b0df1.md"
     },
     {
       "id": "gdrive_fe9f71783f2775e1",
       "name": "Integration Analysis Frame.md",
-      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Integration Analysis Frame.md",
+      "source_url": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Integration Analysis Frame.md",
       "source_path": "Source_Files > 03_Integrations/Integration Analysis Frame.md",
       "source_type": "md",
       "department": "Shopify Admin BSI Brain",
@@ -325,13 +325,13 @@
         "stage/planned",
         "status/ready"
       ],
-      "converted_md_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Integration-Analysis-Frame__fe9f71783f2775e1.md",
-      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Integration Analysis Frame__fe9f71783f2775e1.md"
+      "converted_md_path": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Integration-Analysis-Frame__fe9f71783f2775e1.md",
+      "vault_path": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Integration Analysis Frame__fe9f71783f2775e1.md"
     },
     {
       "id": "gdrive_f0968c262162e194",
       "name": "Theme and Live Store Rules.md",
-      "source_url": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Theme and Live Store Rules.md",
+      "source_url": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Theme and Live Store Rules.md",
       "source_path": "Source_Files > 03_Integrations/Theme and Live Store Rules.md",
       "source_type": "md",
       "department": "Shopify Admin BSI Brain",
@@ -353,8 +353,8 @@
         "stage/planned",
         "status/ready"
       ],
-      "converted_md_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Theme-and-Live-Store-Rules__f0968c262162e194.md",
-      "vault_path": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Theme and Live Store Rules__f0968c262162e194.md"
+      "converted_md_path": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/converted_md/full/2026-06-12/Theme-and-Live-Store-Rules__f0968c262162e194.md",
+      "vault_path": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/02_Source_Documents/production_management/planned/Theme and Live Store Rules__f0968c262162e194.md"
     }
   ]
 }

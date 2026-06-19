@@ -6,9 +6,9 @@ The previous connector surface was metadata-heavy. It exposed source files and g
 
 ## New Connector Exports
 
-- Connector JSONL: `/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/connector_retrieval_index.jsonl`
-- SKU inventory JSON: `/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/sku_inventory_index.json`
-- SKU fast lookup JSON: `/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/sku_fast_lookup.json`
+- Connector JSONL: `$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/connector_retrieval_index.jsonl`
+- SKU inventory JSON: `$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/sku_inventory_index.json`
+- SKU fast lookup JSON: `$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain/07_AI_Index/Graph_Exports/sku_fast_lookup.json`
 
 ## Counts
 

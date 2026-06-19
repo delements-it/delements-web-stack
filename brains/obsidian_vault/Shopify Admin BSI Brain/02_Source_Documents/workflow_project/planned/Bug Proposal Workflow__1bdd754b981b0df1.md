@@ -1,6 +1,6 @@
 ---
 id: "gdrive_1bdd754b981b0df1"
-source_url: "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Bug Proposal Workflow.md"
+source_url: "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Bug Proposal Workflow.md"
 source_path: "Source_Files > 03_Integrations/Bug Proposal Workflow.md"
 source_type: "md"
 department: "Shopify Admin BSI Brain"
@@ -23,7 +23,7 @@ tags: ["dept/source-data", "domain/workflow_project", "stage/planned", "status/r
 - Domain: `workflow_project`
 - Kanban status: `ready`
 - Source path: `Source_Files > 03_Integrations/Bug Proposal Workflow.md`
-- Google source: /Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Bug Proposal Workflow.md
+- Google source: $BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files/03_Integrations/Bug Proposal Workflow.md
 
 ---
 

@@ -1,13 +1,13 @@
 {
-  "source_root": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source",
-  "source_files_root": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/source_files",
-  "converted_root": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/converted_md",
-  "manifests_root": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source/manifests",
-  "output_vault": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain",
-  "rr_builder_root": "/Users/delements/Documents/WORKSPACES/Knowledge Brain/Obsidian_Brain/RR Obsidian Brain Builder",
-  "rr_cli_bin": "/Users/delements/Documents/WORKSPACES/Knowledge Brain/Obsidian_Brain/.venv/bin/rr-obsidian-brain",
-  "rr_config_path": "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_brain_builder/rr-config.shopify-admin-bsi.json",
-  "brain_tools_root": "/Users/delements/Documents/WORKSPACES/Knowledge Brain/Obsidian_Brain/brain-tools",
+  "source_root": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source",
+  "source_files_root": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/source_files",
+  "converted_root": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/converted_md",
+  "manifests_root": "$BSI_ROOT/shared_brains/shopify_admin_bsi_source/manifests",
+  "output_vault": "$BSI_ROOT/shared_brains/vaults/Shopify Admin BSI Brain",
+  "rr_builder_root": "$BRAIN_TOOLS_ROOT/RR Obsidian Brain Builder",
+  "rr_cli_bin": "$BRAIN_TOOLS_ROOT/.venv/bin/rr-obsidian-brain",
+  "rr_config_path": "$BSI_ROOT/local_programs/shopify_brain_builder/rr-config.shopify-admin-bsi.json",
+  "brain_tools_root": "$BRAIN_TOOLS_ROOT/brain-tools",
   "department": "Shopify Admin BSI Brain",
   "schema_version": "2026.06.12"
 }
