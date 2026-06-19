@@ -1,0 +1,55 @@
+{
+  "createdAt": "2026-05-24T01:06:05.937Z",
+  "sourceRepo": "VoltAgent/awesome-design-md",
+  "sourceDir": "/tmp/awesome-design-md/design-md",
+  "intent": "gamehub",
+  "installed": [
+    {
+      "name": "playstation",
+      "role": "gaming product atmosphere, dark campaign hierarchy, console/game content pacing",
+      "status": "installed",
+      "source": "/tmp/awesome-design-md/design-md/playstation/DESIGN.md",
+      "target": "/Users/kaitokid/Documents/AI TOOLS/webflow/webflow-hybrid-automation/skills/website-builder-skill/references/design-md/profiles/playstation/DESIGN.md"
+    },
+    {
+      "name": "spacex",
+      "role": "cinematic high-contrast hero sections and mission-style storytelling",
+      "status": "installed",
+      "source": "/tmp/awesome-design-md/design-md/spacex/DESIGN.md",
+      "target": "/Users/kaitokid/Documents/AI TOOLS/webflow/webflow-hybrid-automation/skills/website-builder-skill/references/design-md/profiles/spacex/DESIGN.md"
+    },
+    {
+      "name": "nike",
+      "role": "bold product storytelling, kinetic retail sections, confident CTA rhythm",
+      "status": "installed",
+      "source": "/tmp/awesome-design-md/design-md/nike/DESIGN.md",
+      "target": "/Users/kaitokid/Documents/AI TOOLS/webflow/webflow-hybrid-automation/skills/website-builder-skill/references/design-md/profiles/nike/DESIGN.md"
+    },
+    {
+      "name": "framer",
+      "role": "polished landing-page structure, animation-friendly sections, clean component transitions",
+      "status": "installed",
+      "source": "/tmp/awesome-design-md/design-md/framer/DESIGN.md",
+      "target": "/Users/kaitokid/Documents/AI TOOLS/webflow/webflow-hybrid-automation/skills/website-builder-skill/references/design-md/profiles/framer/DESIGN.md"
+    },
+    {
+      "name": "webflow",
+      "role": "Webflow-native marketing grammar, restrained buttons/cards, Designer-friendly layout constraints",
+      "status": "installed",
+      "source": "/tmp/awesome-design-md/design-md/webflow/DESIGN.md",
+      "target": "/Users/kaitokid/Documents/AI TOOLS/webflow/webflow-hybrid-automation/skills/website-builder-skill/references/design-md/profiles/webflow/DESIGN.md"
+    }
+  ],
+  "guardrails": [
+    "Use DESIGN.md files as inspiration and constraints, not as exact brand clones.",
+    "Preserve the target site's original content unless the user explicitly approves copy changes.",
+    "Normalize letter-spacing to 0 for this local Webflow program.",
+    "Replace proprietary or unknown brand fonts with licensed project fonts or system fallbacks.",
+    "Keep button/card radii consistent with the existing Webflow class architecture unless redesign requires a documented change.",
+    "Validate desktop, tablet, and mobile breakpoints before Webflow mutation.",
+    "Keep tap targets near 44px or larger where practical.",
+    "Avoid one-note palettes; keep contrast readable and CTA hierarchy clear.",
+    "Use Webflow MCP/Designer handoff for native canvas structure and interactions.",
+    "Use local Data API actions for deterministic CMS, metadata, assets, custom code, and dry-run-safe changes."
+  ]
+}
