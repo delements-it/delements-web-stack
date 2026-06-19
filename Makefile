@@ -11,7 +11,7 @@ help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
 		awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
-all: preflight openclaw figma webflow shopify agents local-programs auth plugins verify ## Full setup (recommended)
+all: preflight openclaw figma webflow shopify agents local-programs auth plugins skills verify ## Full setup (recommended)
 
 preflight: ## Check system dependencies
 	@bash $(SCRIPTS_DIR)/00-preflight.sh
@@ -42,6 +42,9 @@ plugins: ## Setup OpenClaw plugins
 
 verify: ## Verify all integrations
 	@bash $(SCRIPTS_DIR)/06-verify.sh
+
+skills: ## Install OpenClaw + Codex skills
+	@bash $(SCRIPTS_DIR)/10-install-skills.sh
 
 clean: ## Remove installed configs (does NOT delete repo)
 	@echo "⚠️  This will remove BSI agent configs from ~/.openclaw"

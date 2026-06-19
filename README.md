@@ -166,6 +166,18 @@ Repo này **KHÔNG** chứa tokens hay credentials. Tất cả secrets được 
 | `shopify_brain_builder` | Brain maintenance và build tool |
 | `webflow_codex_bridge` | Webflow execution bridge |
 
+## 🎯 Skills
+
+**OpenClaw Skills** (1 skill):
+- `browser-automation` - Web testing, login flows, tab management
+
+**Codex Skills** (5 skills):
+- `figma-mcp-ui-translator` - Convert design briefs to Figma MCP commands
+- `figma-webar-converter` - Convert Figma prototypes to WebAR
+- `webflow-codex` - Webflow MCP integration, CMS, Designer tools
+- `design-md-webflow-adapter` - DESIGN.md profiles to Webflow briefs
+- `website-builder-skill` - Build/audit Webflow & static sites with SEO, a11y, performance
+
 ## 📖 Documentation
 
 - [Architecture](docs/architecture.md) — System design & data flow
