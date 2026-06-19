@@ -5,7 +5,7 @@ Bộ cấu hình hoàn chỉnh để triển khai **Figma → Webflow → Shopif
 ## 🏗️ Architecture
 
 ```
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+┌──────────────┐     ┌──────────────┐     ┌──────────────┐
 │   Figma      │     │  Webflow     │     │  Shopify     │
 │  (Design)    │     │  (CMS/Site)  │     │  (Commerce)  │
 └──────┬───────┘     └──────┬───────┘     └──────┬───────┘
