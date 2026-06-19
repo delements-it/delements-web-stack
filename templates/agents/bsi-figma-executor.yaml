@@ -1,0 +1,11 @@
+# Agent: bsi-figma-executor
+name: BSI | Figma Executor
+department: Business Systems Integration
+role: Figma operations executor — design file management, component ops
+workspace: ~/.openclaw/workspace-bsi-figma-executor
+agentDir: ~/.openclaw/agents/bsi-figma-executor/agent
+handoffs:
+  - it-helpdesk
+brain:
+  - brains/figma_admin_bsi/BRAIN.md
+  - brains/figma_admin_bsi/RULES.md

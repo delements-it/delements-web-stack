@@ -1,0 +1,11 @@
+# Agent: bsi-shopify-executor
+name: BSI | Shopify Executor
+department: Business Systems Integration
+role: Shopify operations executor — store management, theme dev, product ops
+workspace: ~/.openclaw/workspace-bsi-shopify-executor
+agentDir: ~/.openclaw/agents/bsi-shopify-executor/agent
+handoffs:
+  - it-helpdesk
+brain:
+  - brains/shopify_admin_bsi/BRAIN.md
+  - brains/shopify_admin_bsi/RULES.md

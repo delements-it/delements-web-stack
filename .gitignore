@@ -1,0 +1,30 @@
+# Secrets (never commit)
+.env
+*.env
+!.env.example
+
+# Node
+node_modules/
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OpenClaw runtime
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Figma build artifacts
+figma-mcp-server/mcp/dist/
+figma-mcp-server/plugin/dist/
+
+# Logs
+*.log

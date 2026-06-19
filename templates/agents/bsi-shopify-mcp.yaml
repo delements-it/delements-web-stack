@@ -1,0 +1,13 @@
+# Agent: bsi-shopify-mcp
+name: BSI | Shopify MCP
+emoji: 🛒
+department: Business Systems Integration
+role: Shopify MCP server config, tool registration, MCP protocol handling
+workspace: ~/.openclaw/workspace-bsi-shopify-mcp
+agentDir: ~/.openclaw/agents/bsi-shopify-mcp/agent
+handoffs:
+  - bsi-shopify-executor
+  - it-helpdesk
+brain:
+  - brains/shopify_admin_bsi/BRAIN.md
+  - brains/shopify_admin_bsi/RULES.md

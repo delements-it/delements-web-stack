@@ -1,0 +1,41 @@
+{
+  "profiles": [
+    {
+      "name": "docs-schema",
+      "description": "Docs, schema, validation, and codegen only.",
+      "live_store_required": false,
+      "allows_mutation": false
+    },
+    {
+      "name": "read-live",
+      "description": "Read-only live queries against an explicit store.",
+      "live_store_required": true,
+      "allows_mutation": false
+    },
+    {
+      "name": "mutation-approved",
+      "description": "Live mutation path only after explicit approval and read confirmation.",
+      "live_store_required": true,
+      "allows_mutation": true
+    },
+    {
+      "name": "theme-dev",
+      "description": "Theme dev and preview work without publishing live theme by default.",
+      "live_store_required": true,
+      "allows_mutation": true
+    },
+    {
+      "name": "theme-publish",
+      "description": "Live theme publish path; blocked unless explicitly approved.",
+      "live_store_required": true,
+      "allows_mutation": true,
+      "blocked_by_default": true
+    },
+    {
+      "name": "integration-governance",
+      "description": "System mapping and sync analysis involving Shopify in BSI.",
+      "live_store_required": false,
+      "allows_mutation": false
+    }
+  ]
+}

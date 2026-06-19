@@ -1,0 +1,11 @@
+# Agent: bsi-webflow-executor
+name: BSI | Webflow Executor
+department: Business Systems Integration
+role: Webflow operations executor — site management, CMS ops
+workspace: ~/.openclaw/workspace-bsi-webflow-executor
+agentDir: ~/.openclaw/agents/bsi-webflow-executor/agent
+handoffs:
+  - it-helpdesk
+brain:
+  - brains/webflow_admin_bsi/BRAIN.md
+  - brains/webflow_admin_bsi/RULES.md

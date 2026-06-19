@@ -1,0 +1,78 @@
+# OpenClaw Handoff Rules — Web Stack Section
+# Version: 2026-06-19
+# Scope: Figma, Webflow, Shopify agents only
+
+version: 2026-06-19
+default_fallback_behavior: block_and_request_info
+
+# ============================================================
+# IT HELPDESK → BSI WEB AGENTS
+# ============================================================
+
+- from_agent: it-helpdesk
+  to_agent: bsi-shopify-executor
+  trigger: "SHOPIFY_OPERATION"
+  required_fields: ["operation_type", "store_id"]
+
+- from_agent: it-helpdesk
+  to_agent: bsi-webflow-executor
+  trigger: "WEBFLOW_OPERATION"
+  required_fields: ["operation_type", "site_id"]
+
+- from_agent: it-helpdesk
+  to_agent: bsi-figma-executor
+  trigger: "FIGMA_OPERATION"
+  required_fields: ["operation_type", "file_key"]
+
+# ============================================================
+# BSI WEB AGENTS → IT HELPDESK (escalation)
+# ============================================================
+
+- from_agent: bsi-figma-mcp
+  to_agent: it-helpdesk
+  trigger: "IT_HELPDESK_ESCALATION"
+  required_fields: ["issue_summary", "priority"]
+
+- from_agent: bsi-figma-executor
+  to_agent: it-helpdesk
+  trigger: "IT_HELPDESK_ESCALATION"
+  required_fields: ["issue_summary", "priority"]
+
+- from_agent: bsi-webflow-mcp
+  to_agent: it-helpdesk
+  trigger: "IT_HELPDESK_ESCALATION"
+  required_fields: ["issue_summary", "priority"]
+
+- from_agent: bsi-webflow-executor
+  to_agent: it-helpdesk
+  trigger: "IT_HELPDESK_ESCALATION"
+  required_fields: ["issue_summary", "priority"]
+
+- from_agent: bsi-shopify-mcp
+  to_agent: it-helpdesk
+  trigger: "IT_HELPDESK_ESCALATION"
+  required_fields: ["issue_summary", "priority"]
+
+- from_agent: bsi-shopify-executor
+  to_agent: it-helpdesk
+  trigger: "IT_HELPDESK_ESCALATION"
+  required_fields: ["issue_summary", "priority"]
+
+# ============================================================
+# BSI MCP ↔ EXECUTOR (internal handoffs)
+# ============================================================
+
+- from_agent: bsi-figma-mcp
+  to_agent: bsi-figma-executor
+  trigger: "FIGMA_EXECUTION_TASK"
+  required_fields: ["task_type", "file_key"]
+
+- from_agent: bsi-webflow-mcp
+  to_agent: bsi-webflow-executor
+  trigger: "WEBFLOW_EXECUTION_TASK"
+  required_fields: ["task_type", "site_id"]
+
+- from_agent: bsi-shopify-mcp
+  to_agent: bsi-shopify-executor
+  trigger: "SHOPIFY_EXECUTION_TASK"
+  required_fields: ["task_type", "store_domain"]

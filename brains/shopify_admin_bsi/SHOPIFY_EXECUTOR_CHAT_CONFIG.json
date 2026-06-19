@@ -1,0 +1,30 @@
+{
+  "chat_role": "shopify_executor",
+  "project": "Business Systems Integration",
+  "authority": "Admin BSI",
+  "execution_path": "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge",
+  "rules_package": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi",
+  "source_corpus": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source",
+  "built_brain_vault": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain",
+  "store_registry": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/STORE_REGISTRY.json",
+  "bootstrap_file": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/EXECUTOR_BOOTSTRAP.md",
+  "default_executor_store": "root-rotation.myshopify.com",
+  "allowed_action_classes": [
+    "docs-schema",
+    "integration-governance",
+    "read-live",
+    "theme-dev"
+  ],
+  "blocked_action_classes": [
+    "theme-publish",
+    "mutation-approved"
+  ],
+  "non_negotiable_rules": [
+    "Use shopify_codex_bridge as the primary execution path.",
+    "Use Shopify Dev MCP for docs, schema, and validation when applicable.",
+    "Do not edit rules, registry, source corpus, built vault, bridge, or builder from executor chats.",
+    "If the system needs improvement, only create a bug proposal.",
+    "Default store may come only from the official registry.",
+    "If the task is an integration task, analyze source of truth, write boundary, sync direction, and failure path."
+  ]
+}

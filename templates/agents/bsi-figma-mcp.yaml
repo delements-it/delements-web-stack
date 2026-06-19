@@ -1,0 +1,13 @@
+# Agent: bsi-figma-mcp
+name: BSI | Figma MCP
+emoji: 🎨
+department: Business Systems Integration
+role: Figma MCP server config, tool registration, MCP protocol handling
+workspace: ~/.openclaw/workspace-bsi-figma-mcp
+agentDir: ~/.openclaw/agents/bsi-figma-mcp/agent
+handoffs:
+  - bsi-figma-executor
+  - it-helpdesk
+brain:
+  - brains/figma_admin_bsi/BRAIN.md
+  - brains/figma_admin_bsi/RULES.md

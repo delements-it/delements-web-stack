@@ -1,0 +1,13 @@
+# Agent: bsi-webflow-mcp
+name: BSI | Webflow MCP
+emoji: 🌐
+department: Business Systems Integration
+role: Webflow MCP server config, tool registration, MCP protocol handling
+workspace: ~/.openclaw/workspace-bsi-webflow-mcp
+agentDir: ~/.openclaw/agents/bsi-webflow-mcp/agent
+handoffs:
+  - bsi-webflow-executor
+  - it-helpdesk
+brain:
+  - brains/webflow_admin_bsi/BRAIN.md
+  - brains/webflow_admin_bsi/RULES.md

@@ -1,0 +1,34 @@
+{
+  "chat_role": "shopify_brain_owner",
+  "project": "Business Systems Integration",
+  "authority": "Admin BSI",
+  "owner_scope": [
+    "rules-package",
+    "source-corpus",
+    "built-brain-vault",
+    "store-registry",
+    "executor-bootstrap",
+    "executor-prompt",
+    "executor-chat-config",
+    "owner-bootstrap",
+    "owner-prompt",
+    "owner-chat-config",
+    "shopify-codex-bridge",
+    "shopify-brain-builder"
+  ],
+  "rules_package": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi",
+  "source_corpus": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi_source",
+  "built_brain_vault": "/Users/delements/Documents/Business Systems Integration/shared_brains/vaults/Shopify Admin BSI Brain",
+  "store_registry": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/STORE_REGISTRY.json",
+  "owner_bootstrap_file": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/BRAIN_OWNER_BOOTSTRAP.md",
+  "owner_prompt_file": "/Users/delements/Documents/Business Systems Integration/shared_brains/shopify_admin_bsi/SHOPIFY_BRAIN_OWNER_CHAT_PROMPT.md",
+  "execution_path": "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_codex_bridge",
+  "builder_path": "/Users/delements/Documents/Business Systems Integration/local_programs/shopify_brain_builder",
+  "non_negotiable_rules": [
+    "This role may update governance assets for Shopify under Admin BSI.",
+    "This role must preserve owner vs executor separation.",
+    "This role may update the shared brain, registry, bridge, builder, and bootstrap assets.",
+    "If a change affects executor chats, update executor bootstrap and prompt contracts.",
+    "If the task moves into live Shopify execution, say so clearly and apply the proper run policy."
+  ]
+}

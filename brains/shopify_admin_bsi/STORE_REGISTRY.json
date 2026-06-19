@@ -1,0 +1,39 @@
+{
+  "owner": "Business Systems Integration",
+  "default_executor_store": "root-rotation.myshopify.com",
+  "notes": [
+    "This registry is read-only for execution chats.",
+    "Execution chats must not assume a default store unless it is declared here and enabled by the brain owner.",
+    "Root Rotation is the only locally confirmed live Shopify store path on this Mac at the time of this registry snapshot."
+  ],
+  "stores": [
+    {
+      "domain": "root-rotation.myshopify.com",
+      "label": "Root Rotation",
+      "environment": "production",
+      "registry_status": "active-confirmed-local",
+      "operational_owner": "Admin BSI",
+      "browser_profile": "IT Helpdesk / Profile 3",
+      "live_access_path": "shopify_codex_bridge -> Shopify CLI -> shopify store auth/store execute",
+      "allowed_action_classes": [
+        "docs-schema",
+        "integration-governance",
+        "read-live",
+        "theme-dev"
+      ],
+      "blocked_action_classes": [
+        "theme-publish",
+        "mutation-approved"
+      ],
+      "mutation_policy": "Blocked by default until explicit approval.",
+      "evidence": [
+        "shopify_codex_bridge state recorded a successful live test for root-rotation.myshopify.com on 2026-06-12",
+        "local_theme_work/root-rotation-copy-of-highlight exists inside Business Systems Integration"
+      ],
+      "notes": [
+        "Use explicit approval before any mutation or live theme publish.",
+        "Execution chats may treat this as the default executor store because it is declared here by the brain owner."
+      ]
+    }
+  ]
+}

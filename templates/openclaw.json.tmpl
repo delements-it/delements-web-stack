@@ -1,0 +1,36 @@
+{
+  "_comment": "OpenClaw MCP config template — web stack section only. Merge into existing openclaw.json.",
+  "_usage": "Scripts will inject this into ~/.openclaw/openclaw.json automatically.",
+
+  "mcp": {
+    "servers": {
+      "figma": {
+        "command": "npx",
+        "args": ["tsx", "src/index.ts"],
+        "env": {
+          "TRANSPORT": "stdio"
+        },
+        "cwd": "${FIGMA_MCP_DIR}/mcp"
+      },
+      "webflow": {
+        "command": "npx",
+        "args": ["-y", "webflow-mcp-server"],
+        "env": {
+          "WEBFLOW_TOKEN": "${WEBFLOW_TOKEN}"
+        }
+      },
+      "shopify": {
+        "command": "npx",
+        "args": [
+          "shopify-mcp",
+          "--accessToken", "${SHOPIFY_ACCESS_TOKEN}",
+          "--domain", "${SHOPIFY_DOMAIN}"
+        ]
+      },
+      "shopify-dev-mcp": {
+        "command": "npx",
+        "args": ["-y", "@shopify/dev-mcp@latest"]
+      }
+    }
+  }
+}
